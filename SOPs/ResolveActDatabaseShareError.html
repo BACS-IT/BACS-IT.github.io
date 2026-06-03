@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <title>Act Database Sharing Error Solution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <svg style="display:none;">
+        <defs>
+            <symbol id="arrow-icon" viewBox="0 0 640 640">
+                <path
+                    d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z" />
+            </symbol>
+        </defs>
+    </svg>
+    <div class="viewer" id="viewer">
+        <img id="slide" alt="Step image">
+        <div class="overlay">
+            <div class="zone left-zone" id="leftZone"></div>
+            <div class="zone right-zone" id="rightZone"></div>
+            <svg class="arrow left-arrow" viewBox="0 0 640 640">
+                <use href="#arrow-icon" />
+            </svg>
+            <svg class="arrow right-arrow" viewBox="0 0 640 640">
+                <use href="#arrow-icon" />
+            </svg>
+            <!-- Spacer -->
+            <div></div>
+            <div class="caption" id="caption"></div>
+        </div>
+    </div>
+    <script id="slides-data" type="application/json">
+            [
+                { "img": "1_RunAct.png", "caption": "Step 1/3: Run the ACT application." },
+                { "img": "2_ClickShare.png", "caption": "Step 2/3: Click the 'Share' button for the BACS_Master database." },
+                { "img": "3_EnterCredentials.png", "caption": "Step 3/3: Enter credentials for an Act user with administrator privileges and proceed." }
+            ]
+        </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
