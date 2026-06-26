@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc Version="1" DescendantCount="90">
+    <TocEntry Title="Start Here" Link="/Content/Start Here.htm" ComputedResetPageLayout="true" ComputedFirstTopic="true" DescendantCount="0" />
+    <TocEntry Title="Using the SDK" Link="/Content/Introduction/Introduction.htm" ComputedFirstTopic="false" DescendantCount="22">
+        <TocEntry Title="Introduction" Link="/Content/Introduction/Introduction.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Best Practices" Link="/Content/Best Practices/Best Practices.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Getting Started" Link="/Content/Getting_Started/Using_Help.htm" ComputedFirstTopic="false" DescendantCount="5">
+            <TocEntry Title="Support" Link="/Content/Getting_Started/support.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Document conventions" Link="/Content/Getting_Started/Document_conventions.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Data Types" Link="/Content/Getting_Started/Data_Types.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Act! lexicon" Link="/Content/Getting_Started/Act!_lexicon.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Using Help" Link="/Content/Getting_Started/Using_Help.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Act! extensibility models" Link="/Content/Extensibility_Model_files/Extensibility_model.htm" ComputedFirstTopic="false" DescendantCount="5">
+            <TocEntry Title="File types" Link="/Content/File_types/File_types.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Act! extensibility model" Link="/Content/Extensibility_Model_files/Extensibility_model.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Database extensibility model" Link="/Content/Extensibility_Model_files/Database_extensibility_model.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Framework extensibility model" Link="/Content/Extensibility_Model_files/Framework_extensibility_model.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Application extensibility model" Link="/Content/Extensibility_Model_files/Application_extensibility_model.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Act! security model" Link="/Content/Security/Security_model.htm" ComputedFirstTopic="false" DescendantCount="2">
+            <TocEntry Title="Security model" Link="/Content/Security/Security_model.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="User roles" Link="/Content/Security/User_roles.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Folder and file structures" Link="/Content/Folder_Structures/Folder_structures.htm" ComputedFirstTopic="false" DescendantCount="2">
+            <TocEntry Title="Folder structures" Link="/Content/Folder_Structures/Folder_structures.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Supplemental files" Link="/Content/Folder_Structures/Supplemental_files.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Menu IDs" Link="/Content/Command_IDs/Uniform_Resource_Names.htm" ComputedFirstTopic="false" DescendantCount="1">
+            <TocEntry Title="Act! Uniform Resource Names " Link="/Content/Command_IDs/Uniform_Resource_Names.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+    </TocEntry>
+    <TocEntry Title="Learning Paths" Link="/Content/Learning Paths/Learning paths.htm" ComputedFirstTopic="false" DescendantCount="5">
+        <TocEntry Title="Learning Paths" Link="/Content/Learning Paths/Learning paths.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Introduction to Act! and Act! architecture" Link="/Content/Learning Paths/Introduction to Act! and Act! architecture.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Learning about Act! features" Link="/Content/Learning Paths/Learning about features.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Learning about customization" Link="/Content/Learning Paths/Learning about customization.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Reference material" Link="/Content/Learning Paths/Reference material.htm" ComputedFirstTopic="false" DescendantCount="0" />
+    </TocEntry>
+    <TocEntry Title="Architecture Reference" ComputedFirstTopic="false" DescendantCount="0">
+        <TocEntry Title="Act! Architecture Reference" StartSection="false" StartChapter="false" VolumeNumberReset="same" SectionNumberReset="continue" ChapterNumberReset="continue" ComputeToc="false" ReplaceMergeNode="false" Link="/Content/Architecture Reference/Act! Architecture Reference.pdf" ComputedFirstTopic="false" DescendantCount="0" />
+    </TocEntry>
+    <TocEntry Title="Feature Reference" Link="/Content/Feature Reference/Introduction.htm" ComputedFirstTopic="false" DescendantCount="33">
+        <TocEntry Title="Introduction" Link="/Content/Feature Reference/Introduction.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Definitions and acronyms" Link="/Content/Feature Reference/Definitions and acronyms.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Associations" ComputedFirstTopic="false" DescendantCount="1">
+            <TocEntry Title="Creating entity associations" Link="/Content/Feature Reference/Associations/Creating entity associations.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Custom tables" Link="/Content/Feature Reference/Custom tables/Custom tables overview.htm" ComputedFirstTopic="false" DescendantCount="10">
+            <TocEntry Title="Custom tables overview" Link="/Content/Feature Reference/Custom tables/Custom tables overview.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Creating a custom sub-entity" Link="/Content/Feature Reference/Custom tables/Creating a custom sub-entity.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Retrieving a custom sub-entity" Link="/Content/Feature Reference/Custom tables/Retrieving a custom sub-entity.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Editing a custom sub-entity" Link="/Content/Feature Reference/Custom tables/Editing a custom sub-entity.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Deleting a custom sub-entity" Link="/Content/Feature Reference/Custom tables/Deleting a custom sub-entity.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Adding a custom sub-entity row" Link="/Content/Feature Reference/Custom tables/Adding a custom sub-entity row.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Editing a custom sub-entity row" Link="/Content/Feature Reference/Custom tables/Editing a custom sub-entity row.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Deleting a custom sub-entity row" Link="/Content/Feature Reference/Custom tables/Deleting a custom sub-entity row.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Retrieving a custom sub-entity row" Link="/Content/Feature Reference/Custom tables/Retrieving a custom sub-entity row.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Binding data with a custom sub-entity" Link="/Content/Feature Reference/Custom tables/Binding data with a custom sub-entity.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Dashboard" Link="/Content/Feature Reference/Dashboard/Dashboard overview.htm" ComputedFirstTopic="false" DescendantCount="4">
+            <TocEntry Title="Dashboard overview" Link="/Content/Feature Reference/Dashboard/Dashboard overview.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Dashboard structure" Link="/Content/Feature Reference/Dashboard/Dashboard structure.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Dashboard behavior" Link="/Content/Feature Reference/Dashboard/Dashboard behavior.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Dashboard SDK implementation" Link="/Content/Feature Reference/Dashboard/Dashboard SDK implementation.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Groups and Companies" Link="/Content/Feature Reference/Groups and Companies/Groups and companies overview.htm" ComputedFirstTopic="false" DescendantCount="3">
+            <TocEntry Title="Groups and Companies overview" Link="/Content/Feature Reference/Groups and Companies/Groups and companies overview.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Groups and Companies structure" Link="/Content/Feature Reference/Groups and Companies/Groups and companies structure.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Company linking" Link="/Content/Feature Reference/Groups and Companies/Company linking.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="OLEDB" ComputedFirstTopic="false" DescendantCount="1">
+            <TocEntry Title="Using OLEDB 2.0" Link="/Content/Feature Reference/OLEDB/Using OLEDB 2.0.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Opportunities" Link="/Content/Feature Reference/Opportunities/Opportunities overview.htm" ComputedFirstTopic="false" DescendantCount="1">
+            <TocEntry Title="Opportunities overview" Link="/Content/Feature Reference/Opportunities/Opportunities overview.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Smart Tasks (Workflows)" ComputedFirstTopic="false" DescendantCount="4">
+            <TocEntry Title="Smart Tasks overview" Link="/Content/Feature Reference/Smart Tasks/Smart Tasks overview.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Smart Tasks structure" Link="/Content/Feature Reference/Smart Tasks/Smart Tasks structure.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Smart Tasks behavior" Link="/Content/Feature Reference/Smart Tasks/Smart Tasks behavior.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Smart Tasks SDK implementation" Link="/Content/Feature Reference/Smart Tasks/Smart Tasks SDK implementation.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Synchronization" Link="/Content/Feature Reference/Synchronization/Synchronization overview.htm" ComputedFirstTopic="false" DescendantCount="2">
+            <TocEntry Title="Synchronization overview" Link="/Content/Feature Reference/Synchronization/Synchronization overview.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Synchronization components" Link="/Content/Feature Reference/Synchronization/Synchronization components.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+    </TocEntry>
+    <TocEntry Title="Code samples" Link="/Content/Code Samples/Introduction.htm" ComputedFirstTopic="false" DescendantCount="17">
+        <TocEntry Title="Introduction" Link="/Content/Code Samples/Introduction.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Contact samples" Link="/Content/Code Samples/Contact samples/Getting a table name.htm" ComputedFirstTopic="false" DescendantCount="4">
+            <TocEntry Title="Getting a table name" Link="/Content/Code Samples/Contact samples/Getting a table name.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Getting custom contact fields" Link="/Content/Code Samples/Contact samples/Getting custom contact fields.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Inserting a secondary contact" Link="/Content/Code Samples/Contact samples/Inserting a secondary contact.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Deleting a secondard contact" Link="/Content/Code Samples/Contact samples/Deleting a secondary contact.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Associations" ComputedFirstTopic="false" DescendantCount="4">
+            <TocEntry Title="Retrieving an associations manager" Link="/Content/Code Samples/Associations samples/Retrieving an association manager.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Creating an association between two entities" Link="/Content/Code Samples/Associations samples/Creating an association between two entities.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Retrieving a list of associations" Link="/Content/Code Samples/Associations samples/Retrieving a list of associations.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Retrieving a list of associated entities (EntityList)" Link="/Content/Code Samples/Associations samples/Retrieving a list of associated entities(EntityList).htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+        <TocEntry Title="Act! Premium for Web samples" Link="/Content/Code Samples/Customizing Web/Customizing Web.htm" ComputedFirstTopic="false" DescendantCount="6">
+            <TocEntry Title="Customizing Act! Premium for Web" Link="/Content/Code Samples/Customizing Web/Customizing Web.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Adding a navigation bar item" Link="/Content/Code Samples/Customizing Web/Adding a navigation bar item.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="About&#160;adding plug-ins" Link="/Content/Code Samples/Customizing Web/Adding a plug-in.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Adding a tab" Link="/Content/Code Samples/Customizing Web/Adding a tab.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Editing a toolbar" Link="/Content/Code Samples/Customizing Web/Editing a toolbar.htm" ComputedFirstTopic="false" DescendantCount="0" />
+            <TocEntry Title="Editing the menu" Link="/Content/Code Samples/Customizing Web/Editing the menu.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        </TocEntry>
+    </TocEntry>
+    <TocEntry Title="Customization Cookbook" Link="/Content/Customization Cookbook/Introduction.htm" ComputedFirstTopic="false" DescendantCount="4">
+        <TocEntry Title="Introduction" Link="/Content/Customization Cookbook/Introduction.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Adding a new menu and handler" Link="/Content/Customization Cookbook/Adding a new menu and handler.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Creating a custom control" Link="/Content/Customization Cookbook/Creating a custom control.htm" ComputedFirstTopic="false" DescendantCount="0" />
+        <TocEntry Title="Creating a custom tab with dynamic content" Link="/Content/Customization Cookbook/Creating a custom tab with dynamic content.htm" ComputedFirstTopic="false" DescendantCount="0" />
+    </TocEntry>
+    <TocEntry Title="Code Reference" ComputedFirstTopic="false" DescendantCount="1">
+        <TocEntry Title="Act! Code Reference" StartSection="false" StartChapter="false" VolumeNumberReset="same" SectionNumberReset="continue" ChapterNumberReset="continue" ComputeToc="false" ReplaceMergeNode="false" Link="/Content/Code Reference/CodeReference.htm" ComputedFirstTopic="false" DescendantCount="0" />
+    </TocEntry>
+    <TocEntry Title="Functional change documents" ComputedFirstTopic="false" DescendantCount="1">
+        <TocEntry Title="Changes from Act! v22 to v22 (2020)" Link="/Content/Functional Change Documents/Version Changes.htm" ComputedFirstTopic="false" DescendantCount="0" />
+    </TocEntry>
+    <TocEntry Title="Copyright and Trademarks Notice" Link="/Content/Copyright and Trademarks Notice.htm" ComputedFirstTopic="false" DescendantCount="0" />
+</CatapultToc>
