@@ -1,0 +1,1595 @@
+<font face="Arial" size="1">
+
+<html>
+<head>
+<title>API Changes from v22 to v221</title>
+
+<style type="text/css">
+dt      { font-weight: Bold; }
+.big    { font-size: 150%; font-weight: Bold; }
+.small  { font-size:  75%; font-weight: Normal; }
+.endNav { font-size:  75%; font-weight: Normal; margin: 20; }
+</style>
+
+</head>
+
+<body>
+<a name="top" id="top"></a>
+<h2><center>API Changes from v22 to v221</center></h2>
+
+</font>
+<font face="Arial" size="2">
+
+<table width="90%" align="center" border="1" cellspacing="0" bordercolor="A0000" style=background-color: #F0F0F0; border-style: solid;>
+<thead>
+ <tr>
+  <th width="56%" align="left">Assembly</td>
+  <th> &nbsp;</td>
+  <th width="11%" align="left">Members Added</td>
+  <th width="11%" align="left">Members Removed</td>
+  <th width="11%" align="left">Breaking Changes</td><th width="11%" align="left">Percent Churn</td>
+ </tr>
+</thead>
+<tbody>
+
+For details of the COM Compatibility results, <a href=ComCompat.html><b>Click Here</b></a>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.application.interop (420)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.compositeextensions (33)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.compositeextensions.unity (53)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.connectedservices (37)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.data.actdb (346)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.data (263)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.data.creation (8)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.data.resources (8)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.database.managedreportprovider (635)</b></td>
+   <td><center><b><a href="api_change\act.database.managedreportprovider.Unified.html">[Details]</a></b></center></td>
+  <td>60 added</td>
+  <td>0 removed</td>
+  <td>60 breaking</td><td>9.4% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.devices.conduit.config (106)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.devices.conduit.records (1533)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.devices.entities (1938)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.devices.plugin (37)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.devices.synchronization (151)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.devices.ui.custom (7088)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework (16059)</b></td>
+   <td><center><b><a href="api_change\act.framework.Unified.html">[Details]</a></b></center></td>
+  <td>49 added</td>
+  <td>0 removed</td>
+  <td>25 breaking</td><td>0.3% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.businesslink.linkconnector (999)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.businesslink.messaging (45)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.businesslink.synchronization (436)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.componentmodel (33771)</b></td>
+   <td><center><b><a href="api_change\act.framework.componentmodel.Unified.html">[Details]</a></b></center></td>
+  <td>203 added</td>
+  <td>0 removed</td>
+  <td>203 breaking</td><td>0.6% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.componentmodel.core (4804)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.dataexchange (3590)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.directoryservices (77)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.interop (495)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.mailmerge (249)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.messaging (84)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.sageintegration (4418)</b></td>
+   <td><center><b><a href="api_change\act.framework.sageintegration.Unified.html">[Details]</a></b></center></td>
+  <td>343 added</td>
+  <td>0 removed</td>
+  <td>343 breaking</td><td>7.8% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.sageintegration.definitions (22)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.sageintegration.externals (9)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.standaloneactivityrecurutility (18)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.synchronization (2291)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.framework.synchronization.remoting (23)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.google.sync.common (2136)</b></td>
+   <td><center><b><a href="api_change\act.google.sync.common.Unified.html">[Details]</a></b></center></td>
+  <td>2 added</td>
+  <td>0 removed</td>
+  <td>1 breaking</td><td>0.1% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.hotfix (7)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.office.addin (1367)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.office.excel.addin (48)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.office.outlook.addin (1535)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.office.word.addin (48)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.outlook.addin.shared (621)</b></td>
+   <td><center><b><a href="api_change\act.outlook.addin.shared.Unified.html">[Details]</a></b></center></td>
+  <td>1 added</td>
+  <td>0 removed</td>
+  <td>1 breaking</td><td>0.2% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.outlook.integration (487)</b></td>
+   <td><center><b><a href="api_change\act.outlook.integration.Unified.html">[Details]</a></b></center></td>
+  <td>5 added</td>
+  <td>0 removed</td>
+  <td>5 breaking</td><td>1.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.outlook.service.appcommon (1075)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.outlook.service.desktop (5201)</b></td>
+   <td><center><b><a href="api_change\act.outlook.service.desktop.Unified.html">[Details]</a></b></center></td>
+  <td>1 added</td>
+  <td>0 removed</td>
+  <td>1 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.outlook.service.interfaces (336)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.outlook.service.shared (1911)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.outlook.sync.common (10561)</b></td>
+   <td><center><b><a href="api_change\act.outlook.sync.common.Unified.html">[Details]</a></b></center></td>
+  <td>6679 added</td>
+  <td>0 removed</td>
+  <td>8 breaking</td><td>63.2% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.outlook.win.integration (216)</b></td>
+   <td><center><b><a href="api_change\act.outlook.win.integration.Unified.html">[Details]</a></b></center></td>
+  <td>5 added</td>
+  <td>0 removed</td>
+  <td>5 breaking</td><td>2.3% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.security.cryptography (56)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.server.contracts (132)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.collections (396)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.componentmodel (908)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.config (339)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.diagnostics (213)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.diagnostics.defectlogger (752)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.encryption (19)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.fdo (699)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.images (26)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.licensing (54)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.licprovider (636)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.localization (296)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.messaging (68)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.messaging.types (56)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.sync (6917)</b></td>
+   <td><center><b><a href="api_change\act.shared.sync.Unified.html">[Details]</a></b></center></td>
+  <td>16 added</td>
+  <td>0 removed</td>
+  <td>22 breaking</td><td>0.2% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.ui.utilities (145)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.utilities (1013)</b></td>
+   <td><center><b><a href="api_change\act.shared.utilities.Unified.html">[Details]</a></b></center></td>
+  <td>485 added</td>
+  <td>0 removed</td>
+  <td>454 breaking</td><td>47.9% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.webserviceintegration (1000)</b></td>
+   <td><center><b><a href="api_change\act.shared.webserviceintegration.Unified.html">[Details]</a></b></center></td>
+  <td>1 added</td>
+  <td>0 removed</td>
+  <td>1 breaking</td><td>0.1% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.win32 (3754)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.windows.forms (55719)</b></td>
+   <td><center><b><a href="api_change\act.shared.windows.forms.Unified.html">[Details]</a></b></center></td>
+  <td>510 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.9% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.windows.forms.charting (1154)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.windows.forms.navigation (651)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.windows.forms.notificationitem (820)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.windows.forms.styleenforcer (39)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.shared.wpf.controls (3563)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.actappstore (526)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.activities.views (17976)</b></td>
+   <td><center><b><a href="api_change\act.ui.activities.views.Unified.html">[Details]</a></b></center></td>
+  <td>2 added</td>
+  <td>1 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.activities.views.shared (1835)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.activityviews.widgets.timeselector (870)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.advancedquery (1138)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.calendar.views (2582)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.common.images (13)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.companies.views (6325)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.connectedservices (1675)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.contacts.views (11310)</b></td>
+   <td><center><b><a href="api_change\act.ui.contacts.views.Unified.html">[Details]</a></b></center></td>
+  <td>529 added</td>
+  <td>0 removed</td>
+  <td>4 breaking</td><td>4.7% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.core (4784)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.criteriadlg (1083)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.dashboard.designer.common (54)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.dashboard.designer.controlcontainer (1260)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.dashboard.designer.interfaces (67)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.dashboard.designer.loader (107)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.dashboard.designer.view (414)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.dashboard.views (520)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.dataexchange (4441)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.designer.controls (8870)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.designer.layout (700)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.designer.report (1214)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.designer.report.data (1227)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.designer.report.resources (8)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.dialogs (32)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.email (364)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.engage (1896)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.export (6939)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.fieldoperations (2265)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.groupcompanypicker (2090)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.groups.views (5293)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.import (11383)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.lookupsresources (9)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.opportunities.views (8428)</b></td>
+   <td><center><b><a href="api_change\act.ui.opportunities.views.Unified.html">[Details]</a></b></center></td>
+  <td>11 added</td>
+  <td>2 removed</td>
+  <td>0 breaking</td><td>0.1% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.picklist (9270)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.preferences (17222)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.remoting.common (99)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.reports.views (1539)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.resources.views (523)</b></td>
+   <td><center><b><a href="api_change\act.ui.resources.views.Unified.html">[Details]</a></b></center></td>
+  <td>4 added</td>
+  <td>0 removed</td>
+  <td>4 breaking</td><td>0.8% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.sageintegration (20475)</b></td>
+   <td><center><b><a href="api_change\act.ui.sageintegration.Unified.html">[Details]</a></b></center></td>
+  <td>12 added</td>
+  <td>0 removed</td>
+  <td>13 breaking</td><td>0.1% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.search (1154)</b></td>
+   <td><center><b><a href="api_change\act.ui.search.Unified.html">[Details]</a></b></center></td>
+  <td>2 added</td>
+  <td>0 removed</td>
+  <td>2 breaking</td><td>0.2% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.socialmedia (3330)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.syncsetup (18836)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.tabpage (16549)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.updater (783)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.widgets (10875)</b></td>
+   <td><center><b><a href="api_change\act.ui.widgets.Unified.html">[Details]</a></b></center></td>
+  <td>2 added</td>
+  <td>0 removed</td>
+  <td>2 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.wordprocessor (386)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.wordprocessordialogs (60)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>act.ui.workflow (13476)</b></td>
+   <td><center><b><a href="api_change\act.ui.workflow.Unified.html">[Details]</a></b></center></td>
+  <td>32 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.2% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>actemailconnectormetadata (79)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>actmigration (1144)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>actoutlookaddin (553)</b></td>
+   <td><center><b><a href="api_change\actoutlookaddin.Unified.html">[Details]</a></b></center></td>
+  <td>1 added</td>
+  <td>0 removed</td>
+  <td>1 breaking</td><td>0.2% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>adodb (1404)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>autocomplete (973)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>awssdk (120145)</b></td>
+   <td><center><b><a href="api_change\awssdk.Unified.html">[Details]</a></b></center></td>
+  <td>3 added</td>
+  <td>3 removed</td>
+  <td>1 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>c1.c1printdocument (18627)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>c1.c1zip (284)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>c1.common (1397)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>c1.win.c1flexgrid (2629)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>c1.win.c1printpreview (4620)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>c1.win.c1report (1029)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>c1.win.c1reportdesigner (1091)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>c1.win.c1spell (1196)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>c1.win.c1thesaurus (260)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>chartfx.base (1534)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>chartfx.winforms.adornments (182)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>chartfx.winforms.base (317)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>chartfx.winforms (4989)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>chartfx.winforms.data (67)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>chartfx.winforms.gauge (6291)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>coledbsecurity (11)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>contentrenderingapi (837)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>devcomponents.dotnetbar (17414)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>devexpress.utils (6964)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>devexpress.xtranavbar (4262)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>enums.net (778)</b></td>
+   <td><center><b><a href="api_change\enums.net.Unified.html">[Details]</a></b></center></td>
+  <td>1 added</td>
+  <td>1 removed</td>
+  <td>2 breaking</td><td>0.1% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>extensibility (7)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>facebook (562)</b></td>
+   <td><center><b><a href="api_change\facebook.Unified.html">[Details]</a></b></center></td>
+  <td>2 added</td>
+  <td>2 removed</td>
+  <td>1 breaking</td><td>0.4% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>genghis (4755)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>google.apis.auth (509)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>google.apis (272)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>google.apis.calendar.v3 (660)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>google.apis.core (658)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>google.apis.gmail.v1 (549)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>google.gdata.client (4158)</b></td>
+   <td><center><b><a href="api_change\google.gdata.client.Unified.html">[Details]</a></b></center></td>
+  <td>2 added</td>
+  <td>1 removed</td>
+  <td>1 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>google.gdata.contacts (1572)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>google.gdata.extensions (3135)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>infragistics.act.win.ultrawinlistbar (2086)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>infragistics.act.win.ultrawinschedule (22694)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>infragistics2.shared.v8.2 (5029)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>infragistics2.win.ultrawinexplorerbar.v8.2 (9520)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>infragistics2.win.v8.2 (55630)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>infralution.common (182)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>infralution.controls (4953)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>infralution.controls.virtualtree (4109)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>interop.adchronopher (799)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>interop.aderrorhandling (137)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>interop.cdo (1519)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>interop.dartmail (817)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>interop.iwshruntimelibrary (653)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>janus.windows.common.v3 (1129)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>janus.windows.explorerbar.v3 (2594)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>log4net (3511)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>lumisoft.net (9148)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>mail (3947)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>memprofiler2 (361)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.interop.excel (13130)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.interop.outlook (6335)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.interop.word (5962)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.tools (19)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.tools.common (604)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.tools.common.v4.0.utilities (182)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.tools.excel (2677)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.tools.outlook (139)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.tools.outlook.v4.0.utilities (524)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.tools.v4.0.framework (256)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.office.tools.word (1563)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.practices.composite (909)</b></td>
+   <td><center><b><a href="api_change\microsoft.practices.composite.Unified.html">[Details]</a></b></center></td>
+  <td>1 added</td>
+  <td>0 removed</td>
+  <td>2 breaking</td><td>0.1% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.practices.composite.presentation (932)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.practices.composite.unityextensions (60)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.practices.objectbuilder2 (694)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.practices.servicelocation (73)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.practices.unity (697)</b></td>
+   <td><center><b><a href="api_change\microsoft.practices.unity.Unified.html">[Details]</a></b></center></td>
+  <td>3 added</td>
+  <td>1 removed</td>
+  <td>3 breaking</td><td>0.4% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.practices.unity.configuration (1651)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.threading.tasks (114)</b></td>
+   <td><center><b><a href="api_change\microsoft.threading.tasks.Unified.html">[Details]</a></b></center></td>
+  <td>2 added</td>
+  <td>0 removed</td>
+  <td>2 breaking</td><td>1.8% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.threading.tasks.extensions (31)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.threading.tasks.extensions.desktop (83)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.vbe.interop (708)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>microsoft.visualstudio.tools.applications.runtime (1080)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>milhtmlparser (174)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>newtonsoft.json (3016)</b></td>
+   <td><center><b><a href="api_change\newtonsoft.json.Unified.html">[Details]</a></b></center></td>
+  <td>5 added</td>
+  <td>4 removed</td>
+  <td>4 breaking</td><td>0.2% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>oauth.net.common (375)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>oauth.net.components (180)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>oauth.net.consumer (231)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>phonenumbers (482)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>proxy (35)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>qlmlicenselib (9613)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>restsharp (1238)</b></td>
+   <td><center><b><a href="api_change\restsharp.Unified.html">[Details]</a></b></center></td>
+  <td>1229 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>99.3% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>sage.pep.environment (62)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>sage.pep.environment.interface (13)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>sage.sdata.client (1523)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>sautinsoft.document (2551)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>scratchpad.common (1622)</b></td>
+   <td><center><b><a href="api_change\scratchpad.common.Unified.html">[Details]</a></b></center></td>
+  <td>2 added</td>
+  <td>0 removed</td>
+  <td>3 breaking</td><td>0.1% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>smoliteapi (409)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>stdole (207)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>swiftpageoauth2client (114)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>system.net.http (772)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>system.net.http.extensions (11)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>system.net.http.formatting (830)</b></td>
+   <td><center><b><a href="api_change\system.net.http.formatting.Unified.html">[Details]</a></b></center></td>
+  <td>829 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>99.9% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>system.net.http.webrequest (48)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>system.threading.tasks.dataflow (1)</b></td>
+   <td><center><b><a href="api_change\system.threading.tasks.dataflow.Unified.html">[Details]</a></b></center></td>
+  <td>1 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>100.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>tapiex_wrap (2786)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.controls (45989)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.controls.Unified.html">[Details]</a></b></center></td>
+  <td>9439 added</td>
+  <td>17 removed</td>
+  <td>15 breaking</td><td>20.5% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.controls.datavisualization (140213)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.controls.datavisualization.Unified.html">[Details]</a></b></center></td>
+  <td>498 added</td>
+  <td>1 removed</td>
+  <td>1898 breaking</td><td>0.4% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.controls.gridview (45509)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.controls.gridview.Unified.html">[Details]</a></b></center></td>
+  <td>5249 added</td>
+  <td>19 removed</td>
+  <td>55 breaking</td><td>11.5% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.controls.input (24643)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.controls.input.Unified.html">[Details]</a></b></center></td>
+  <td>70 added</td>
+  <td>4 removed</td>
+  <td>20 breaking</td><td>0.3% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.controls.navigation (52941)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.controls.navigation.Unified.html">[Details]</a></b></center></td>
+  <td>4697 added</td>
+  <td>25 removed</td>
+  <td>8 breaking</td><td>8.9% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.controls.ribbonview (21710)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.controls.ribbonview.Unified.html">[Details]</a></b></center></td>
+  <td>21697 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>99.9% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.controls.richtextboxui (44117)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.controls.richtextboxui.Unified.html">[Details]</a></b></center></td>
+  <td>44110 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>100.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.data (4298)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.data.Unified.html">[Details]</a></b></center></td>
+  <td>111 added</td>
+  <td>7 removed</td>
+  <td>59 breaking</td><td>2.6% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.documents (44432)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.documents.Unified.html">[Details]</a></b></center></td>
+  <td>1548 added</td>
+  <td>60 removed</td>
+  <td>215 breaking</td><td>3.5% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.documents.core (1217)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.documents.core.Unified.html">[Details]</a></b></center></td>
+  <td>702 added</td>
+  <td>0 removed</td>
+  <td>1 breaking</td><td>57.7% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.documents.flow (2406)</b></td>
+   <td><center><b><a href="api_change\telerik.windows.documents.flow.Unified.html">[Details]</a></b></center></td>
+  <td>12 added</td>
+  <td>0 removed</td>
+  <td>12 breaking</td><td>0.5% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.documents.formatproviders.html (709)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.documents.formatproviders.rtf (751)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>telerik.windows.documents.proofing.dictionaries.en-us (26)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>txtextcontrol (6428)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>wpftoolkit (10720)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>wpftoolkit.extended (18551)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>xceed.compression (130)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>xceed.filesystem.01 (267)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>xceed.filesystem.03 (211)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>xceed.filesystem.04 (624)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>xceed.filesystem.05 (7)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>xceed.filesystem.06 (236)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>xceed.filesystem.07 (12)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>xceed.filesystem.08 (140)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>xceed.zip (1656)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+
+ <tr bgcolor=#F0F0F0>
+  <td><b>zlib.portable (451)</b></td><td>&nbsp;</td>
+  <td>0 added</td>
+  <td>0 removed</td>
+  <td>0 breaking</td><td>0.0% churn</td></tr>
+</tbody></table>
+
+<p class="endNav"><font size=2><a href="#top">Top</a></font></p>
+
+
+</body>
+</html>
+
