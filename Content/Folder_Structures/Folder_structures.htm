@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:id="Folder_Structures\Folder_structures.htm" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:ignoredWords="Studio.NET;Studio.NET.;MSDE;XP;com.act;saveas;com.interact;scoping;RDBMS;C;Files\ACT\ACT;WPMacros" MadCap:tocPath="Using the SDK|Folder and file structures" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" type="text/css" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" type="text/css" /><title>Folder structures</title>
+        <link href="../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../ehlpdhtm.js">
+        </script>
+        <h1><a name="kanchor26"></a><a name="kanchor19"></a>Folder structures</h1>
+        <p class="p_5">The <span class="MyVariablesProductShortName">Act!</span> application includes database and system folders that 
+ are automatically created either during installation or when a database 
+ is created. During  installation,  folders are created specifically for 
+ third-party developers to store add-on solutions or custom controls. All 
+ add-on solutions should be stored in the Plugins folder and custom controls 
+ should be stored in the Tools folder.</p>
+        <p class="p_5">The Root folder, which stores all folders, can 
+ be moved or deleted by a user assigned a <a href="../Security/User_roles.htm">role</a> 
+ that allows them to perform database maintenance. The specific folder 
+ where each file type is placed is not user modifiable. From the SDK, 
+ you can add or delete files directly to the folders by specifying where 
+ you want to place files or by using a call that places files in the default 
+ folders. You can use SDK calls to display the data store path so that 
+ you can quickly find folders and files. There are also SDK methods to 
+ build the shared supplemental file system if it is missing, or to verify 
+ that the shared supplemental file system exists and is accessible by the 
+ current user. </p>
+        <p class="p_5">The following describes the various folders 
+ that contain  database and supplemental files. (The files contained 
+ in the folders can either be shared or personal. See <a href="Supplemental_files.htm">Supplemental 
+ files</a> for more information.) &#160;</p>
+        <h2>Folders created during installation</h2>
+        <p><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t21">Plugins<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a>
+        </p>
+        <div MadCap:targetName="t21" style="display: none;">
+            <p>The Plugins folder is used to store third-party add-on solutions. The 
+ default file path is C:\Program Files\ACT\ACT for Windows\Plugins.</p>
+        </div>
+        <p><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t20">Print Templates<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a>
+        </p>
+        <div MadCap:targetName="t20" style="display: none;">
+            <p>The Print Templates folder contains default templates for printing address 
+ books and calendars.</p>
+        </div>
+        <p><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t19">Tools<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a>
+        </p>
+        <div MadCap:targetName="t19" style="display: none;">
+            <p>The Tools folder is used to store custom controls created by third-party 
+ developers. The default path is C:\Program 
+ Files\ACT\ACT for Widows\Tools.</p>
+        </div>
+        <p class="p_5"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t18">Email<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a> 
+ (personal and shared)</p>
+        <div MadCap:targetName="t18" style="display: none;">
+            <p>The Email folder contains email messages that are not associated with 
+ contact records.</p>
+        </div>
+        <p class="p_5"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t17">Netlinks<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a>
+        </p>
+        <div MadCap:targetName="t17" style="display: none;">
+            <p>The Netlinks folder contains the default set of Internet links used 
+ in <span class="MyVariablesProductShortName">Act!</span>.</p>
+        </div>
+        <p class="p_5"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t16">Spell<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a> 
+ (personal)</p>
+        <div MadCap:targetName="t16" style="display: none;">
+            <p>The Spell folder contains spelling checker dictionaries.</p>
+        </div>
+        <p class="p_5"><span class="span_3"><span class="dropspot"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t15">Backup<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a></span></span>
+        </p>
+        <div MadCap:targetName="t15" style="display: none;">
+            <p>The Backup folder contains backup copies of your databases.</p>
+        </div>
+        <p class="p_5"><span class="span_1"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t14">Databases<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a></span>
+        </p>
+        <div MadCap:targetName="t14" style="display: none;">
+            <p>The Databases folder contains the <span class="MyVariablesProductShortName">Act!</span> database file (.ADF), the <span class="MyVariablesProductShortName">Act!</span> 
+ log file (.ALF) which is the internal transaction log for the <span class="MyVariablesProductShortName">Act!</span> data, 
+ and the indicator, or "pointer" to the database file (.PAD). 
+ The .ADF and .ALF must always exist, and must exist in the same folder 
+ to comprise the SQL Server database. </p>
+            <p>Another file type that is associated with the .adf is the remote database 
+ file (.RDF) This file is automatically created when a remote database 
+ is created for synchronization. The file itself is not a database, but 
+ contains the .adf file which is transported to a remote user. Think of 
+ the .rdf as a .zip file that must be unpacked and restored to a remote 
+ user's computer to use and synchronize <span class="MyVariablesProductShortName">Act!</span> data. </p>
+        </div>
+        <p class="p_5"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t12">Documents<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a> 
+ (shared)</p>
+        <div MadCap:targetName="t12" style="display: none;">
+            <p>The Documents folder contains files such as letters, fax cover pages, 
+ and memos created in the word-processing application. </p>
+        </div>
+        <p class="p_5"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t11">Layouts<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a> 
+ (personal and shared)</p>
+        <div MadCap:targetName="t11" style="display: none;">
+            <p>The Layouts folder contains the default and alternate layouts, which 
+ define how information is displayed.</p>
+        </div>
+        <p class="p_5"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t10">Queries<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a>
+        </p>
+        <div MadCap:targetName="t10" style="display: none;">
+            <p>The Queries folder contains queries you create and save for later use. 
+ </p>
+        </div>
+        <p class="p_5"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t9">Reports<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a> 
+ (personal and shared)</p>
+        <div MadCap:targetName="t9" style="display: none;">
+            <p>The Reports folder contains templates for creating reports and for creating 
+ and printing labels and envelopes. <span class="MyVariablesProductShortName">Act!</span> provides label and envelope templates 
+ for use within a variety of U.S. and international locations. </p>
+        </div>
+        <p class="p_5"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t8">Templates<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a> 
+ (personal and shared)</p>
+        <div MadCap:targetName="t8" style="display: none;">
+            <p>The Templates folder contains the <span class="MyVariablesProductShortName">Act!</span> word processor and Microsoft 
+ Word templates for documents, including letters, memos, fax cover pages, 
+ and forms.</p>
+        </div>
+        <h2>Folders created when a database is created</h2>
+        <p class="p_5"><span class="dropspot"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t7">Attachments<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a> 
+ (personal)</span>
+        </p>
+        <div MadCap:targetName="t7" style="display: none;">
+            <p>The Attachments folder contains files, such as letters created in a 
+ word-processing application, that are attached to contacts records.</p>
+        </div>
+        <p class="p_5"><span class="dropspot"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t6">Backup<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a></span>
+        </p>
+        <div MadCap:targetName="t6" style="display: none;">
+            <p>The Backup folder contains backup copies of your databases.</p>
+        </div>
+        <p class="p_5"><span class="dropspot"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t5">Documents<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a></span>
+        </p>
+        <div MadCap:targetName="t5" style="display: none;">
+            <p class="p_5">The Documents folder contains files such as 
+ letters, fax cover pages, and memos created in the word-processing application. 
+ </p>
+        </div>
+        <p class="p_5"><span class="dropspot"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t4">Layouts<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a></span>
+        </p>
+        <div MadCap:targetName="t4" style="display: none;">
+            <p>The Layouts folder contains layouts associated with the database.</p>
+        </div>
+        <p class="p_5"><span class="dropspot"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t3">Queries<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a></span>
+        </p>
+        <div MadCap:targetName="t3" style="display: none;">
+            <p>The Queries folder contains queries you create and save for later use. 
+ </p>
+        </div>
+        <p class="p_5"><span class="dropspot"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t2">Reports<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a></span>
+        </p>
+        <div MadCap:targetName="t2" style="display: none;">
+            <p>The Reports folder contains reports associated with the database.</p>
+        </div>
+        <p class="p_5"><span class="dropspot"><a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t1">Templates<img style="border: none;margin-left: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /></a></span>
+        </p>
+        <div MadCap:targetName="t1" style="display: none;">
+            <p>The Templates folder contains templates for creating reports and for 
+ creating and printing labels and envelopes. <span class="MyVariablesProductShortName">Act!</span> provides label and envelope 
+ templates for use within a variety of U.S. and international locations. 
+ </p>
+        </div>
+        <p class="p_14">&#160;</p>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

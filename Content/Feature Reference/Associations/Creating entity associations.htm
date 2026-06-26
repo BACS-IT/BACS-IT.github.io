@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Feature Reference|Associations" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Creating entity associations</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Creating <a name="kanchor29"></a>entity associations</h1>
+        <p>Users can create associations, or <i>relationships</i> between contacts. This allows them to track information about contacts who may interact with each other, but who are not members of a group or company.</p>
+        <p>This feature is expanded to let you create and annotate relationships between parent entities (contacts, companies, groups, and opportunities) in <span class="MyVariablesProductShortName">Act!</span>.</p>
+        <p>The entry point to associations is an AssociationsManager, which can be accessed as a property off the ActFrameworkobject using the property Associations. An AssociationsManager lets you create, update, and delete associations.</p>
+        <H2>Retrieve an AssociationManager</H2>
+        <p>To work with associations you need to use an AssociationsManager via the Associations property on the ACTFramework. The ActFramework object will need to be logged on to the database you want to create the association in.  An AssociationsManager will be used to retrieve the AssociationManager appropriate for the two entities you are attempting to associate.</p>
+        <p>To retrieve an AssociationManager, use the GetAssociactionManager method on the AssociationsManager. This method has several overloads that may be used depending on the information you have available. In essence, each method provides a means of describing the two entities you want to associate.</p>
+        <p>To get a list of the available AssociationManagers, call the GetAssociationManagers method on the AssociationsManager.</p>
+        <H2>Create an association between two entities</H2>
+        <p>To create an association, use the AssociationsManager via the Associations property on the ACTFramework. See “Retrieve an AssociationManager”</p>
+        <p>Once you retrieve the necessary AssociationManager, create the association by calling the CreateAssociationMethod. This method requires the two entities you will be associating. Each entity must be of the same type used to retrieve the AssociationManager in the previous steps.</p>
+        <p>Using the Association, provide additional information to describe this association by accessing the FieldDescriptorCollection (Association.Fields). Once you describe the association, persist the data by calling the Update method.</p>
+        <H2>Get a list of an entity’s associations</H2>
+        <p>To get a list of an entity’s associations, retrieve the proper AssociationManager. See “Retrieve an AssociationManager”. From the AssociationManager, the association information may be retrieved in one of two ways.</p>
+        <ul>
+            <li value="1"><b>GetAssocations Method</b>–This method retrieves an array of Association objects that describe the associations between two entities.</li>
+            <li value="2"><b>GetAssociatedEntities Method</b>–This method returns an EntityList containing all of the entities associated with the provided entity.  You may then edit or retrieve association information using an AssociationFieldDescriptor. For detailed information about feature behavior, see Creating and Changing Contact Relationships in the <span class="MyVariablesProductShortName">Act!</span> online Help.</li>
+        </ul>
+        <P class="Note"><b>Note:</b> Code samples for associations are provided in this SDK. For detailed information about feature behavior, see <i>Creating and Changing Contact Relationships</i> in the <span class="MyVariablesProductShortName">Act!</span> online Help.</P>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

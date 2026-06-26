@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="ActFramework;Act.Web;FX;C1;FlexGrid;IComponent;Act.Framework.ComponentModel.Core;bitmask;Datastore;IView;IPlugin;Act.UI.Dashboard.Views.dll;UI.Dashboard.Views.dll;Act.UI.Dashboard.Designer.dll;UI.Dashboard.Designer.dll;Framework.ComponentModel.Core;ActFrameworkComponent;Act.Framework.ComponentModel.dll;Framework.ComponentModel.dll;OpportunitiesByUser;ScheduleAtAGlance;Act.Framework.ComponentModel.Core.dll;Framework.ComponentModel.Core.dll" MadCap:tocPath="Feature Reference|Smart Tasks (Workflows)" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Smart Tasks structure</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor51"></a>Smart Tasks structure</h1>
+        <p>This section explains the Smart Tasks Framework structure.</p>
+        <p>The base classes for sequence Smart Tasks are housed in the Act.Framework.ComponentModel.Core level of the SDK.</p>
+        <p>The following assemblies contain Smart Tasks-related Framework members:</p>
+        <ul>
+            <li value="1"><b>Act.Framework.ComponentModel.dll</b> contains the specific Smart Task activities, such as ACTDelayActivity, ScheduleACTActivity, SendEmailActivity and the Smart Task service interfaces used by these activities.  This functionality is not exposed through the SDK.</li>
+            <li value="2"><b>Act.Framework.ComponentModel.Core.dll</b> contains the base activities. This assembly is exposed through the SDK. You can leverage the assembly to build custom Smart Task activities.   These are found under the Act.Framework.ComponentModel.Core.Workflow namespace.</li>
+            <li value="3"><b>Act.Framework.dll</b> contains the workflow engine and methods and classes to create, edit, delete and run Smart Tasks, register workflow local services, and workflow engine methods and events.  These are found under the Act.Framework.Workflow namespace.</li>
+        </ul>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

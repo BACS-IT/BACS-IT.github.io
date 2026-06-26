@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="ActFramework;Act.Web;FX;C1;FlexGrid;IComponent;Act.Framework.ComponentModel.Core;bitmask;Datastore;IView;IPlugin;Act.UI.Dashboard.Views.dll;UI.Dashboard.Views.dll;Act.UI.Dashboard.Designer.dll;UI.Dashboard.Designer.dll;Framework.ComponentModel.Core;ActFrameworkComponent;Act.Framework.ComponentModel.dll;Framework.ComponentModel.dll;OpportunitiesByUser;ScheduleAtAGlance;Act.Framework.ComponentModel.Core.dll;Framework.ComponentModel.Core.dll;Remoting;SyncML;Act.Framework;namespace;SetCompanyLink;Contact.SetCompanyLink;ClearCompanyLink;Contact.ClearCompanyLink;Contact.Update;GroupDetailView;CompanyDetailView;HierarchicalEntityInfoTree;HierarchicalEntityInfoPickerTree;MutableEntityManger;GroupManager;CompanyManager;ons;remoting;timestamps;datastore;XML" MadCap:tocPath="Feature Reference|Synchronization" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Synchronization components</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor55"></a>Synchronization components</h1>
+        <p>The following components make up the <span class="MyVariablesProductShortName">Act!</span> synchronization architecture.</p>
+        <h2>Sync Server  </h2>
+        <p>Sync Server is a .NET remoting server that listens for incoming calls made over the network. When the client makes a connection, the server creates a synchronization remote object for the respective main database and hands it to the client so it can be used to make remote calls on the server side. When the clients invoke methods on the remote object, the data is applied to the main database that is designated for that remote object only. The incoming data is first processed before the call is returned with server side data if available, hence the calls are synchronous in nature.
+
+The server class starts the Sync Server in two modes: Stand Alone Server and Windows Service. The service requires a TCP port to listen for incoming calls. 
+
+</p>
+        <H2>Sync Client  </H2>
+        <p>Sync Client is a .NET remoting client that connects with the server and makes remote calls on the remote object. Each client is connected to only one remote database, so all the data is part of only one server/client combination. A proper authentication and handshaking routine verifies and validates the client before synchronization can occur. If there are no data changes to be synchronized, the session is terminated. Use of timestamps and watermarks keep track of synchronization session boundaries so that synchronization data is not repeated after a successful synchronization.
+
+The client class starts the Sync Client by connecting to the service and receiving an instance of the synchronization remote object. After receiving this instance, the client can make remote calls over the network. Because the synchronization model is a pull-model, all operations are initiated on the client side.
+
+</p>
+        <h2>Sync Control Tables  
+</h2>
+        <p>Sync Control Tables are SQL tables that store information about the data  changed by the user. Synchronization data is only captured if synchronization is enabled for the database.
+
+</p>
+        <h2>Sync Triggers </h2>
+        <p>Sync Triggers are SQL triggers that are fired when data is changed on a synchronization eligible table. The triggers capture the information about the data and store it in synchronization control tables.
+
+</p>
+        <H2>Sync Procedures</H2>
+        <p>Sync Procedures are SQL procedures that process and deliver real data sets to the synchronization engine for transportation.
+
+</p>
+        <h2>File Watcher </h2>
+        <p>File Watchers is a .NET based monitor on the datastore that monitors file changes and stores the information in synchronization control tables. 
+
+</p>
+        <h2>Sync Log  </h2>
+        <p>Sync Logs are database and XML based logs that store information about a synchronization session. They provide useful information for debugging synchronization problems in previous synchronization sessions.
+</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

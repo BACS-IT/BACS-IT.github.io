@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="ActFramework;Act.Web;FX;C1;FlexGrid;IComponent;Act.Framework.ComponentModel.Core;bitmask;Datastore;IView;IPlugin;Act.UI.Dashboard.Views.dll;UI.Dashboard.Views.dll;Act.UI.Dashboard.Designer.dll;UI.Dashboard.Designer.dll;Framework.ComponentModel.Core;ActFrameworkComponent;Act.Framework.ComponentModel.dll;Framework.ComponentModel.dll;OpportunitiesByUser;ScheduleAtAGlance;Act.Framework.ComponentModel.Core.dll;Framework.ComponentModel.Core.dll;Remoting;SyncML" MadCap:tocPath="Feature Reference" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Definitions and acronyms</title>
+        <link href="../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor28"></a>Definitions and acronyms</h1>
+        <p><b>Expiration </b>- a concept that says that after a certain period of time passes without synchronizing to the main database, the ability of a remote database to perform sync to that main database will end.</p>
+        <p><b>Framework </b>- the core <span class="MyVariablesProductShortName">Act!</span> SDK.</p>
+        <p><b>Main database</b> - the parent (Publisher) database and the master database from which remote databases are created. The main database has ultimate control of the sync family scenario. There is only one main database in a sync family.</p>
+        <p><b>. NET Remoting</b> - a library to call remote methods over a network.
+</p>
+        <p><b>Remote database</b> - the child (Subscriber) database which is created from a main database. There can be many remote databases to one main database.
+</p>
+        <p><b>SQL</b> - Structured Query Language, a language that provides an interface to relational database systems.
+
+</p>
+        <p><b>Stored Procedure -</b> a program that is stored within a database system and is used as a method for executing SQL queries on the database objects in a way abstracted from a client application.
+</p>
+        <p><b>Subscription lists</b> - the lists of contact records included in a Sync Set. Subscription lists contain all accessible contacts based on the “who list”, filtered by any existing Sync Set query definition and any contacts added statically. Contacts may be added or removed from the subscription list in an ad hoc fashion. The subscription list takes precedence over the Sync Set query definition. Contacts removed from a subscription list are excluded from the Sync Set regardless of whether the contact record matches Sync Set query criteria.</p>
+        <p><b>Sync family</b> – refers to a main database and all related remote databases that were created from it and are synchronizing with it.</p>
+        <p><b>Sync Set</b> – set of contact records designated to be synchronized between a main database and a remote database.</p>
+        <p><b>Sync Set query definition</b> – advanced query criteria used to define contacts to be included in a Sync Set. The query is executed against all contacts to which the designated users of the remote database (“who list”) have access. The query is executed each time sync occurs, making the Sync Set “dynamic”. </p>
+        <p><b>SyncML</b> – sync protocol and transport representation specification.
+</p>
+        <p><b>Trigger</b> – similar to a stored procedure, but is invoked implicitly by a pre-defined action including an insert, update, or delete of one or more records in a table.
+</p>
+        <p><b>“Who list”</b> – the list of users for whom a Sync Set is created; the intended users of a particular remote database. The contact records in the main database which are accessible to the “who list” of a Sync Set make up the superset of contacts from which the Sync Set is drawn.
+
+</p>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

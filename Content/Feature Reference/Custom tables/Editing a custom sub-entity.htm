@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Feature Reference|Custom tables" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Editing a custom sub-entity</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Editing a <a name="kanchor33"></a>custom sub-entity</h1>
+        <p>CustomEntityManager provides methods to update some of the properties
+of a custom sub-entity.
+</p>
+        <p>UpdateCustomEntityDescription allows you to change the description of a
+custom sub-entity after it has been created.</p>
+        <p>UpdateCustomEntityDisplayName allows you to change the display name
+of a custom sub-entity. The display name needs to be unique across the
+database.
+</p>
+        <p>The update methods return an updated CustomEntityDescriptor that has
+the changes made.
+</p>
+        <p>You can also edit a custom sub-entity definition by creating fields, editing
+fields, and deleting fields using the define fields SDK. The way to
+accomplish those tasks is identical to the way you would do it for
+Contacts, Groups, or Companies. The only difference is you would pass in
+a reference to your CustomEntityDescriptor for the entity to perform the
+action in the define fields API.
+</p>
+        <h2>Record Identifier
+</h2>
+        <p>Another feature added for custom sub-entities is the ability to set which
+fields of a row uniquely identify the row. Since custom sub-entities are
+dynamic and can have any number and type of fields, record identifier
+provides you a way to indicate to the SDK what fields you are using to
+uniquely identify a row in a custom entity.
+</p>
+        <p>The SDK will use these fields when creating a history for a field change notification. In the define fields SDK, you can set a field to create a history every time the field is modified. With custom sub-entities, the history will be generated for the parent record(s) (i.e. the contacts, groups and companies) which contain the custom sub-entity record.</p>
+        <p>Record Identifier is made up of up to 3 fields usually, any more than that
+makes it not very useful. The CustomSubEntityManager has a method
+called SetRecordIdentifier that takes an array of
+CustomEntityFieldDescriptors. The order of the fields in the array is
+preserved in the database and the fields show up in that order in the
+history that is cut for a field change notification.
+</p>
+        <p>The record identifier could be used in the future by the <span class="MyVariablesProductShortName">Act!</span> UI to know
+which fields to show when you need to pick a custom sub-entity. It also
+could be used to determine what fields should be shown for the <span class="MyVariablesProductShortName">Act!</span> default mutable entities like contacts, groups, and companies in a record
+picker.
+</p>
+        <p>It is highly recommended that you set the record identifier if you are going to
+have fields that have field change histories being created. Even if you aren’t
+creating histories it is a good way to dynamically determine what field to show to the user
+by default for choosing a custom sub-entity since in the future a UI could
+be provided to the user to change which fields they would like to see.</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

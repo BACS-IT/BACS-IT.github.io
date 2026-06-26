@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Code samples|Contact samples" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Getting a table name</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Getting a <a name="kanchor57"></a>table name</h1>
+        <p>This sample retrieves the name of the Contact table for the given real field name. It is useful in cases where the <span class="MyVariablesProductShortName">Act!</span> database contains a large number of custom fields and additional Contact tables.
+The sample shows the following tasks:	</p>
+        <ul>
+            <li value="1">Using the SDK to get Contact field descriptors.</li>
+            <li value="2">Comparing the ColumnName of each contact field descriptor in the list with the parameter.
+</li>
+            <li value="3">When we find the contact field descriptor with the same column name as the one in the parameter, we return its Table name. If not found – we return empty string.
+</li>
+        </ul>
+        <p>		
+/// &lt;summary&gt;
+</p>
+        <p>/// Retrieves name of the Contact table of given field if there are lot of custom fields and additional Contact tables
+</p>
+        <p>/// &lt;/summary&gt;
+</p>
+        <p>/// &lt;param name="dbFieldName"&gt;real name of the field&lt;/param&gt;
+</p>
+        <p>/// &lt;returns&gt;table name as string if field exist in database; otherwise return empty string&lt;/returns&gt;	</p>
+        <p>private string GetTableName(string dbFieldName)
+</p>
+        <p>{
+</p>
+        <blockquote>
+            <p>ActFramework ACTFM = new ActFramework();
+</p>
+            <p>	ACTFM.LogOn("C:\\Documents and Settings\\Administrator\\My Documents\\ACT\\Act for Win 8\\Databases\\Act8Demo.pad",				"Chris Huffman","");</p>
+            <p>ContactFieldDescriptor[] cfd = ACTFM.Contacts.GetContactFieldDescriptors();
+</p>
+            <p>	for(int i=0; i &lt; cfd.Length; i++)
+</p>
+            <p>	{
+		</p>
+            <blockquote>
+                <p>if ( dbFieldName.Equals(cfd[i].ColumnName) )
+			</p>
+                <blockquote>
+                    <p>return cfd[i].TableName;	</p>
+                </blockquote>
+            </blockquote>
+            <p>			
+	}
+	</p>
+            <p>return "";	
+</p>
+        </blockquote>
+        <p>}
+</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

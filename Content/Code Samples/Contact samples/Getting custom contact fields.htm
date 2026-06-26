@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Code samples|Contact samples" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Getting custom contact fields</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Getting <a name="kanchor58"></a>custom contact fields</h1>
+        <p>This sample retrieves names of the custom contact fields and puts them into an Array list.
+The sample shows the following tasks:</p>
+        <ul>
+            <li value="1">Using the SDK to get Contact field descriptors.</li>
+            <li value="2">Getting the table of each contact field descriptor using the TableByName property of SchemaMetadata.</li>
+            <li value="3">If  column in the table is custom (IsCustom = true), adding the field name to the Array list.
+</li>
+        </ul>
+        <p>/// &lt;summary&gt;
+</p>
+        <p>/// Retrieves names of all contact custom fields from the <span class="MyVariablesProductShortName">Act!</span> Database
+</p>
+        <p>/// &lt;/summary&gt;
+</p>
+        <p>/// &lt;returns&gt;Array list with names of the custom fields&lt;/returns&gt;
+</p>
+        <p>public override ArrayList GetContactCustomFields()
+</p>
+        <p>{
+</p>
+        <blockquote>
+            <p>ActFramework ACTFM = new ActFramework();
+	</p>
+            <p>ACTFM.LogOn("C:\\Documents and Settings\\Administrator\\My Documents\\ACT\\Act for Win 8\\Databases\\Act8Demo.pad",				"Chris Huffman","");
+</p>
+            <p>SchemaMetaData smd = ACTFM.SchemaMetaData;
+	ReadOnlyHashtable tblByName = smd.TableByName;
+	ArrayList customFieldArray = new ArrayList();
+</p>
+            <p>	ContactFieldDescriptor[] cfdList = ACTFM.Contacts.GetContactFieldDescriptors();
+	</p>
+            <p>ContactFieldDescriptor cfd;</p>
+            <p>	Table tContact = null;
+	</p>
+            <p>Column col;	</p>
+            <p>	
+			
+	for(int i=0; i &lt; cfdList.Length; i++)</p>{
+</blockquote>
+        <blockquote>
+            <blockquote>cfd = cfdList[i];
+</blockquote>
+        </blockquote>
+        <blockquote>
+            <blockquote>		tContact = (Act.Framework.MetaData.Table) tblByName[cfd.TableName];
+		</blockquote>
+            <blockquote>col	= (Column)tContact.ColumnByDisplayName[cfd.DisplayName];
+
+		</blockquote>
+            <blockquote>if( col != null )
+		</blockquote>
+            <blockquote>
+                <blockquote>{
+</blockquote>
+                <blockquote>
+                    <blockquote>			if( col.IsCustom )
+				customFieldArray.Add( col.Name );
+</blockquote>
+                </blockquote>
+                <blockquote>		}
+	</blockquote>
+            </blockquote>
+        </blockquote>
+        <blockquote>}
+	</blockquote>
+        <blockquote>return customFieldArray;</blockquote>
+        <p>}</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="ActFramework;Act.Web;FX;C1;FlexGrid;IComponent;Act.Framework.ComponentModel.Core;bitmask;Datastore" MadCap:tocPath="Feature Reference|Dashboard" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Dashboard SDK implementation</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor44"></a>Dashboard SDK implementation</h1>
+        <p>This topic provides detailed design information that directly supports SDK implementation of the design.</p>
+        <h2>Component Model</h2>
+        <p>The minimum requirements for implementing a Dashboard component are to: </p>
+        <ul>
+            <li value="1">Implement <b>IComponent</b> <![CDATA[ ]]></li>
+            <li value="2">Have an attribute that indicates it is a custom Dashboard component.
+</li>
+        </ul>
+        <p>A base component is supplied for SDK consumers to derive from, but it is not a requirement.
+
+The <span class="MyVariablesProductShortName">Act!</span> Dashboard components all derive from the base component.
+The <span class="MyVariablesProductShortName">Act!</span> Dashboard components use a visualization control to present the data in the center area of the base component.
+Users can change the visualization for <span class="MyVariablesan Act!">an Act!</span> Dashboard component  at design time.
+
+Due to this feature,  the <span class="MyVariablesProductShortName">Act!</span> Dashboard components must be able to dynamically create a visualization.</p>
+        <H2>Base component
+</H2>
+        <p>The design for the components calls for a base component in the Act.Framework.ComponentModel.Core assembly that will be part of the SDK.
+This base component encompasses all the functionality common to Dashboard components: the header, footer, and filter bar.
+The base component provides a center area for the derived components to use for displaying a visualization.
+</p>
+        <H2>Configurable component
+</H2>
+        <p>The configurable component provides the common functionality and attributes for all the <span class="MyVariablesProductShortName">Act!</span> Dashboard components that can be configured by the Dashboard configuration User Interface (UI).
+The attributes of the component are specified independent of the current visualization.
+This allows the user to be able to change visualizations without losing the data that may or may not be applicable to that visualization.
+
+These attributes include:</p>
+        <ul>
+            <li value="1">Selected visualization </li>
+            <li value="2">Legend dock location</li>
+            <li value="3">Legend visibility target</li>
+            <li value="4">Target visibility</li>
+            <li value="5">Totals visibility</li>
+            <li value="6">Current display scale for charts.
+
+</li>
+        </ul>
+        <p>The configurable component is implemented as an abstract class and defines some properties that should be implemented by the derived consumer.
+
+The derived components should be able to enumerate all the visualizations that they support as a bitmask, a display name that is the name for the component shown to the user in the configuration UI, and what the default visualization is for that component.
+</p>
+        <H2>Entity specific component
+</H2>
+        <p>At this level an entity-specific component should be derived from the configurable component.
+This is where any entity specific logic should be implemented that is common across all of the those entities' components.
+
+This component implements the filters for the entity, the columns for the entities list view, and the sort order of the columns in the list view.
+
+</p>
+        <H2>Specification-level Dashboard component
+</H2>
+        <p>The following components  currently derive from the entity specific component:</p>
+        <ul>
+            <li value="1">My Schedule At-A-Glance</li>
+            <li value="2">Activities By User
+</li>
+            <li value="3">Opportunity Pipeline by Stage
+</li>
+            <li value="4">Opportunities by User
+</li>
+            <li value="5">Top Open Opportunities
+</li>
+            <li value="6">Closed Sales to Date
+
+</li>
+        </ul>
+        <p>These components implement the logic specific to each Dashboard component and have attributes  specific to each Dashboard component.
+
+For example, the Top Open Opportunities component has attributes for the number of open opportunities to show and which field to use for the calculation.</p>
+        <h2>Database and data storage</h2>
+        <p>Database changes to support Dashboard include the addition of storage structure  for the component Filters, Columns, and Sort. 
+The approach to defining and storing the user Dashboard settings is to handle them within the database in a new table structure. This is necessary due to the behavioral requirement to synchronize user filters, and the desire for consistent behavior between <span class="MyVariablesProductShortName">Act!</span> and <span class="MyVariablesPremiumforWebShortName">Act! Premium (access via web)</span>. This approach is similar to the database Preferences model for those items defined and stored within the database or Datastore.
+</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Code samples|Act! Premium for Web samples" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Adding a tab</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor69"></a>Adding a tab</h1>
+        <p>You&#160;can&#160;add&#160;new&#160;<a name="kanchor70"></a>tabs&#160;to&#160;<span class="MyVariablesPremiumforWebShortName">Act! Premium (access via web)</span> using the UILayoutManager class found in the Act.Web.Controls assembly. You&#160;add&#160;new tabs  at runtime and must add&#160;them in the plug-in Init() method.  </p>
+        <P class="Infinitive">To add a tab</P>
+        <ol>
+            <li value="1"><span style="font-weight: normal;">In Init(), use the UILayoutManager.AddCustomTabProvider() method to provide <span class="MyVariablesPremiumforWebShortName">Act! Premium (access via web)</span> with a callback function used to initialize the tab. For example:</span>
+            </li>
+        </ol>
+        <P class="NormIndent">Act.Web.Controls.Layouts.UILayoutManager.AddCustomTabProvider(Act.Web.Controls.Layouts.LayoutType.Contacts, new Act.Web.Controls.Layouts.UILayoutManager.CustomTabProvider(this.ServeCustomTab));</P>
+        <ol MadCap:continue="true">
+            <li value="2">Implement the tab provider to return the text displayed on the tab and the location of the tab page.  You must set the "tabURL" parameter  to the full path of the tab page.  To get the <span class="MyVariablesPremiumforWebShortName">Act! Premium (access via web)</span> path, use the session.AppPath property, and then append the location of the plug-in page relative to the root APFW folder. For example:</li>
+        </ol>
+        <P class="NormIndent">private bool </P>
+        <P class="NormIndent">ServeCustomTab(Act.Web.Framework.ACTSessionManager session, out string tabName, out string tabURL)
+</P>
+        <P class="NormIndent">{
+   </P>
+        <P class="NormIndent">tabName="sample plugin";
+</P>
+        <P class="NormIndent">   tabURL = session.AppPath + "Plugins/content/SamplePlugin/foo.aspx";
+   </P>
+        <P class="NormIndent">return true;
+</P>
+        <P class="NormIndent">}
+</P>
+        <ol MadCap:continue="true">
+            <li value="3">Create the page.  The page may reside in the plug-in assembly or in a separate assembly.  You must copy the ASPX file  to the location specified in the CustomTabProvider method, and you must copy the assembly containing the code behind file  to the root APFW folder.
+</li>
+        </ol>
+        <p>Tab pages should inherit from Act.Web.Framework.Page  to gain access to the ACTSessionManager.  This is how plug-in tabs gain access to the ActFramework as well as other  SDK methods.
+</p>
+        <p style="font-weight: bold;">How do I...?</p>
+        <p><a href="Adding a navigation bar item.htm">Add a navigation bar item</a>&#160;</p>
+        <p><a href="Adding a plug-in.htm">Add a plug-in</a>
+        </p>
+        <p><a href="Editing the menu.htm">Edit the menu</a>&#160;</p>
+        <p><a href="Editing a toolbar.htm">Edit a toolbar</a>
+        </p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

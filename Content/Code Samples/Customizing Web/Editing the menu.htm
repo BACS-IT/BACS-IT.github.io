@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Code samples|Act! Premium for Web samples" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Editing the menu</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor72"></a>Editing the menu</h1>
+        <p>You can manipulate the  menu  via the <a name="kanchor73"></a>IWebMenu interface defined in the Act.Web.Framework assembly.  Plug-ins access the menu via the Menu property of the ACTSessionManager.  To insure the integrity of the menu, this object should not be held across function calls.   The interfaces used to manipulate the menu are as follows:</p>
+        <h2>IWebMenu</h2>
+        <p><b>Properties
+</b>
+        </p>
+        <ul>
+            <li value="1">	IWebMenuItemCollection Items get{}
+		</li>
+        </ul>
+        <P class="NormIndent">Returns the list of top level menu items.
+   </P>
+        <p><b>Methods
+</b>
+        </p>
+        <ul>
+            <li value="1">	void AddJavascriptInclude(string filename);
+</li>
+        </ul>
+        <P class="NormIndent">Includes the specified javascript file in the menu section.  Functions defined in the javascript file can be used by added menu items.
+</P>
+        <h2>IWebMenuItemCollection</h2>
+        <p><b>Properties
+</b>
+        </p>
+        <ul>
+            <li value="1">	IWebMenuItem this[string id] get{}
+</li>
+        </ul>
+        <P class="NormIndent">Returns the menu item with the specified id in the collection.  If the item does not exist in the collection, then null is returned.  Default menu ids can be found in menu.xml.
+	    
+</P>
+        <ul>
+            <li value="1">IWebMenuItem this[int index] get{}
+</li>
+        </ul>
+        <P class="NormIndent">Returns the menu item at the specified index in the collection.  If the index is less than zero or greater than or equal to the number of items in the collection, then null is returned.
+	       
+   
+   </P>
+        <p><b>Methods
+	</b>
+        </p>
+        <ul>
+            <li value="1">IWebMenuItem Add(string id, string caption, ActionType type, string action, bool enabled);
+</li>
+        </ul>
+        <P class="NormIndent">Adds a menu item to the end of the collection.  Returns the newly created menu item. 
+		</P>
+        <P class="NormIndent"><b>Parameters
+</b>
+        </P>
+        <P class="NormIndent">Id: A unique string used to identify the menu item.  If the menu item is not at the top level then the id is pre-pended with the ids of its parents separated by a colon.  (i.e.  Adding a menu item with the id “MyItem” to the Contact menu will result in an id of c:MyItem.)
+</P>
+        <P class="NormIndent">caption: The text that is displayed.  This should be localized by the plug-in.
+</P>
+        <P class="NormIndent">type: The type of action taken when the item is clicked.  Top level menu items default to “none”.
+</P>
+        <P class="NormIndent">action: The action to take when the item is selected.  If the type is “JS” then action should be the javascript function to execute.  If the type is “submenu” then the action should be the id of the submenu.
+</P>
+        <P class="NormIndent">enabled: Whether or not the item is initially enabled.
+</P>
+        <ul>
+            <li value="1">IWebMenuItem AddAt(int index, string id, string caption, ActionType type, string action, bool enabled);
+	</li>
+        </ul>
+        <P class="NormIndent">Adds a menu item at the specified location in the collection.  If the index is less than zero an ArgumentOutOfRangeException is thrown.  If the index is greater than the last item then the new item is appended to the end of the collection.  All other parameters are the same as above.
+
+</P>
+        <ul>
+            <li value="1">void Remove(string id);
+</li>
+        </ul>
+        <P class="NormIndent">Removes the menu item with the specified id from the collection.  If the id does not exist in the collection then an ArgumentException is thrown.
+
+</P>
+        <ul>
+            <li value="1">public void RemoveAt(int index)
+</li>
+        </ul>
+        <P class="NormIndent">Removes the menu item at the specified index in the collection.  If the index is less than zero or past the end of the collection, then an ArgumentOutOfRangeException is thrown.
+</P>
+        <h2>IWebMenuItem</h2>
+        <p style="font-weight: bold;">Properties</p>
+        <ul>
+            <li style="font-weight: bold;" value="1"><span style="font-weight: normal;">IWebMenuItemCollection Items get{}
+</span>
+            </li>
+        </ul>
+        <P class="NormIndent"><span style="font-weight: normal;">Returns the collection of subitems for the menu item.  If there are no subitems, then null is returned.
+       </span>
+        </P>
+        <ul>
+            <li style="font-weight: bold;" value="1"><span style="font-weight: normal;">bool Enabled get{} set{}
+</span>
+            </li>
+        </ul>
+        <P class="NormIndent"><span style="font-weight: normal;">Gets or sets the enabled state of the menu item.  The page must be reloaded before any changes will take effect.
+
+       </span>
+        </P>
+        <ul>
+            <li style="font-weight: bold;" value="1"><span style="font-weight: normal;">string Caption get{}
+</span>
+            </li>
+        </ul>
+        <P class="NormIndent"><span style="font-weight: normal;">Returns the text displayed by the menu item.
+
+        </span>
+        </P>
+        <ul>
+            <li style="font-weight: bold;" value="1"><span style="font-weight: normal;">string ID get{}
+</span>
+            </li>
+        </ul>
+        <P class="NormIndent"><span style="font-weight: normal;">Returns the id of the menu item.
+</span>
+        </P>
+        <p style="font-weight: bold;">How do I...?</p>
+        <p><a href="Adding a tab.htm">Add a tab</a>
+        </p>
+        <p><a href="Adding a plug-in.htm">Add a plug-in</a>
+        </p>
+        <p><a href="Adding a navigation bar item.htm">Add a navigation bar item</a>&#160;</p>
+        <p><a href="Editing a toolbar.htm">Edit a toolbar</a>
+        </p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

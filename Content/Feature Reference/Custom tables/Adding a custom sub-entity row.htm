@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Feature Reference|Custom tables" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Adding a custom sub-entity row</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Adding a <a name="kanchor35"></a>custom sub-entity row</h1>
+        <h2>Creating a new custom sub-entity object
+</h2>
+        <p>Custom sub-entities derive from MutableEntity just like Contacts, Groups
+and Companies. Working with custom sub-entity data is just like working
+with data in those other mutable entities.
+</p>
+        <p>The CustomSubEntityManager provides methods to create new row
+objects and delete row objects.
+</p>
+        <p>The CreateCustomEntity method creates a new custom sub-entity object
+that represents a row in the database for that custom sub-entity. The
+return type for the method is a generic type T. This will be set to
+whatever the type you retrieved the CustomSubEntityManager for.
+</p>
+        <p>This allows you to work with custom sub-entities in a strongly typed
+fashion and provides type safety for your operations. This is especially
+useful if your application is using more than one custom sub-entity.
+</p>
+        <p>After you call CreateCustomEntity you can use the returned reference to
+set field data and add parent entities to the record.
+</p>
+        <p>To persist the object to the database you call the Update method.
+</p>
+        <p>To set field data you can either get field descriptors and set the values on
+the field descriptors to your CustomSubEntity object or use the Fields
+property indexer of the CustomSubEntity object.
+</p>
+        <h2>Retrieving field descriptors
+</h2>
+        <p>The CustomSubEntityManager provides methods to get all the field
+descriptors for the custom sub-entity, to get field descriptors by name
+(alias, real or display), and to get the fields by type.
+</p>
+        <p>This is the same pattern for getting field descriptors used in the other
+mutable entities, Contacts, Groups and Companies.
+</p>
+        <p>To get all the fields for a custom sub-entity use the
+GetCustomEntityFieldDescriptors method. This returns an array of
+CustomEntityFieldDescriptors. This method will only return the fields for
+the custom sub-entity the CustomSubEntityManager was retrieved for.
+</p>
+        <p>The GetCustomEntityFieldDescriptor method allows you to get a field
+descriptor by name. There is a new enumeration you can use when
+getting the field descriptor that lets you use alias to get the field.
+FieldNameType is the enumeration and there is an overload for
+GetCustomEntityFieldDescriptor that takes it. The enumeration can be
+used to indicate whether the field name is the real name, display name or
+the alias for the field.
+</p>
+        <h2>Setting values for fields
+</h2>
+        <p>Once you have retrieved a field descriptor you can use the SetValue
+method to set the data for that field. You pass in the CustomSubEntity
+object you want to set the value on and the value you want to set.
+</p>
+        <p>Another way to set the value of a field is to use the Fields property on the
+CustomSubEntity object. The fields property returns a fields collection
+that has an indexer where you use the field name to indicate which field
+you would like to set the value of.
+</p>
+        <p>C# example:
+</p>
+        <P class="Code">account.Fields["ACCOUNT_TYPE",
+</P>
+        <P class="Code">Act.Framework.MutableEntities.FieldNameType.Alias] =
+</P>
+        <P class="Code">"Checking";
+</P>
+        <p>This example uses the alias to set the value of a field to a string.
+</p>
+        <p>The other way to add a custom sub-entity record is to use .NET  <a href="Binding data with a custom sub-entity.htm">data
+binding</a>.</p>
+        <h2>Specifying parent entity row(s)
+</h2>
+        <p>The only required data for saving a custom sub-entity is a parent entity
+record to associate the record to. If your custom sub-entity hangs off of
+Contacts you will need to set at least one contact as the owner of a
+custom sub-entity row before it will save to the database.
+</p>
+        <p>The CustomSubEntity object provides methods to set Contacts, Groups,
+and Companies as parent records for the custom sub-entity row.
+SetContacts, SetGroups and SetCompanies methods allow you to specify
+
+a ContactList, GroupList and/or CompanyList as the parent records for the
+custom sub-entity.
+</p>
+        <p>There are also methods to clear the parent records for each parent entity
+type. ClearContacts, ClearGroups and ClearCompanies methods delete all
+the appropriate parent entities for the custom sub-entity row.
+</p>
+        <p>Make sure you set the Contacts, Groups and/or Companies on the
+CustomSubEntity object before calling the Update method to save your
+custom sub-entity row. If the object is not set, you will get an exception indicating that you
+have to have at least one parent row for a custom sub-entity record.</p>
+        <h2>Setting row level security</h2>
+        <p>Custom sub-entities work just like notes or histories, they do not have
+ACLs (access control lists). They can only be set public or private.
+</p>
+        <p>You have to have access to at least one parent entity to be able to see a
+custom sub-entity row as well. More about how the security model works
+for retrieval can be found in <a href="Retrieving a custom sub-entity row.htm">retrieving custom sub-entity rows</a>.
+</p>
+        <p>To set a custom sub-entity’s row level security, use the AccessType
+property. It can be set to either public or private using the AccessType
+enumeration.</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

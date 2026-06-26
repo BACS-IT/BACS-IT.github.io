@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Customization Cookbook" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Creating a custom tab with dynamic content</title>
+        <link href="../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Creating a <a name="kanchor79"></a>custom tab with dynamic content</h1>
+        <p>This sample application demonstrates how to create a custom tab on the Contact Detail view in <span class="MyVariablesPremiumforWebShortName">Act! Premium (access via web)</span> and populate the tab with local weather content from the internet. You can compile and implement the plugin in its current iteration, or you can customize the plugin by making changes where indicated in the code.</p>
+        <P class="Infinitive">To implement the <a name="kanchor80"></a>plug-in as is</P>
+        <ol>
+            <li value="1">Locate the SamplePlugin.zip file you downloaded with the SDK in the Code Samples folder, and unzip it.</li>
+            <li value="2">Open the SamplePlugin.sln file in Microsoft Visual Studio 2005 or later.</li>
+            <li value="3">Compile the solution by clicking the <b>Compile </b>tool.</li>
+            <li value="4">Locate the DLL file that you just compiled, and copy it to the Plugins folder on your <span class="MyVariablesPremiumforWebShortName">Act! Premium (access via web)</span> server.</li>
+        </ol>
+        <P class="Note"><b>Note:</b> The Plugins folder is located under the APFW folder in your installation. If the Plugins folder does not exist, create it.</P>
+        <ol MadCap:continue="true">
+            <li value="5">In the folder where you unzipped the sample plugin, select every ASPX, CS, and JS file, and then copy them to the Content folder that is in the Plugins folder on your <span class="MyVariablesPremiumforWebShortName">Act! Premium (access via web)</span> server.</li>
+        </ol>
+        <P class="Note"><b>Note:</b> The Content folder is located under the Plugin folder referenced in step 4. If the Content folder does not exist, create it.</P>
+        <ol MadCap:continue="true">
+            <li value="6">Repeat step 5 with any image files.</li>
+        </ol>
+        <p>The plugin loads next time you start <span class="MyVariablesPremiumforWebShortName">Act! Premium (access via web)</span>, and users can access it when they log on.</p>
+        <p>You can make changes to the sample plugin by viewing the Class1.cs file from inside the solution in Visual Studio. Each method in the Class1.cs file displays comments that direct you where to make changes. For example, you can:</p>
+        <ul>
+            <li value="1">Change the name of the custom tab.</li>
+            <li value="2">Change the content on the tab by changing the master page and images.</li>
+        </ul>
+        <P>If you make changes to the tab, remember the following tips:</P>
+        <ul>
+            <li value="1">If you change the master page referenced in the Class1.cs file, you must also copy the new master page into the solution folder before compiling.</li>
+            <li value="2">If you make more advanced changes outside the scope of this document, the plug-in must always reference Act.Web.Framework and Act.Web.Framework.IWebPlugin.</li>
+        </ul>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

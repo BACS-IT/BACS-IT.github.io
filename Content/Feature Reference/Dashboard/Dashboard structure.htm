@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="ActFramework;Act.Web;FX;C1;FlexGrid;IComponent;Act.Framework.ComponentModel.Core;bitmask;Datastore;IView;IPlugin;Act.UI.Dashboard.Views.dll;UI.Dashboard.Views.dll;Act.UI.Dashboard.Designer.dll;UI.Dashboard.Designer.dll;Framework.ComponentModel.Core;ActFrameworkComponent;Act.Framework.ComponentModel.dll;Framework.ComponentModel.dll;OpportunitiesByUser;ScheduleAtAGlance;Act.Framework.ComponentModel.Core.dll;Framework.ComponentModel.Core.dll" MadCap:tocPath="Feature Reference|Dashboard" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Dashboard structure</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor42"></a>Dashboard structure</h1>
+        <p>The User Interface (UI) and Framework structure of the <span class="MyVariablesProductShortName">Act!</span> dashboard is similar to other <span class="MyVariablesProductShortName">Act!</span> views.</p>
+        <h2>User Interface</h2>
+        <p>The <b>dashboard view</b> follows the existing design of all <span class="MyVariablesProductShortName">Act!</span> views. It is contained in its own assembly. It implements the required interface, IView, and implements the plug-in interface IPlugin.
+The View Manager dynamically loads the Dashboard view as it does with other <span class="MyVariablesProductShortName">Act!</span> views.
+The Dashboard view contains an instance of the designer surface that is used to lay out the Dashboard components.</p>
+        <p>The <b>dashboard control container</b> is a control that implements the table layout behavior called for in the dashboard configuration spec.
+It contains the dashboard components and lays them out.
+</p>
+        <p>The <b>dashboard configuration wizard</b> configures the <span class="MyVariablesProductShortName">Act!</span> dashboard components' user interface, data filtering, and presentation attributes.
+
+
+</p>
+        <p>The following assemblies contain Dashboard-related UI members:</p>
+        <ul>
+            <li value="1"><b>Act.UI.Dashboard.Views.dll</b> is the host view for Dashboard, and related UI functionality.
+
+</li>
+            <li value="2"><b>Act.UI.Dashboard.Designer.dll</b> is the designer for Dashboard.
+</li>
+        </ul>
+        <p><a href="../../Resources/Images/Dashboard_UI_structure.bmp" target="_blank" title="Dashboard UI high-level class model" alt="Dashboard UI high-level class model">Click here</a> to view a high-level class model for the Dashboard UI.</p>
+        <h2>Framework</h2>
+        <p>This section explains the <span class="MyVariablesProductShortName">Act!</span> Dashboard Framework structure.</p>
+        <p>The <b>base component</b> for the Dashboard components is housed in the Act.Framework.ComponentModel.Core level of the SDK.
+The base component implements all the behavior and controls common to all Dashboard components.
+The base component is supported in the SDK and is extensible by SDK consumers.
+
+</p>
+        <p>The <b>dashboard framework component</b> provides the dashboard components with the ability to access the <span class="MyVariablesProductShortName">Act!</span> framework.
+It derives from our existing ActFrameworkComponent that is used by the layout designer.
+The dashboard framework component controls the loading of the data and displaying of the data for the dashboard components.
+This component is supported in the SDK and is in framework component model core.
+
+</p>
+        <p>The <b><span class="MyVariablesProductShortName">Act!</span> Framework Component Model dashboard components</b> are the specific components that equate to the specification-level dashboard components.
+They dynamically create a visualization based on the user selection.
+
+</p>
+        <p>The Dashboard <b>visualizations </b>are controls that are dynamically created and displayed based on what visualization is set in the current configuration for the component.
+
+The chart visualization  shows horizontal bar charts, vertical bar charts, and pie charts.
+
+The list visualization shows the list view grid control.
+
+The gauge visualization  shows the gauge control with a legend control.
+</p>
+        <p>The following assemblies contain Dashboard-related Framework members:</p>
+        <ul>
+            <li value="1"><b>Act.Framework.ComponentModel.dll</b> contains the specific dashboard components, such as OpportunitiesByUser and ScheduleAtAGlance. 
+
+
+It also contains the UI-specific visualizations including chart, pie, and gauge elements. This functionality is not exposed through the SDK.
+
+</li>
+            <li value="2"><b>Act.Framework.ComponentModel.Core.dll</b> contains the base component. This assembly is exposed through the SDK, and you can leverage the assembly to build custom dashboard components.
+
+</li>
+        </ul>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

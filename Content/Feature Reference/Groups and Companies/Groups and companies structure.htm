@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="ActFramework;Act.Web;FX;C1;FlexGrid;IComponent;Act.Framework.ComponentModel.Core;bitmask;Datastore;IView;IPlugin;Act.UI.Dashboard.Views.dll;UI.Dashboard.Views.dll;Act.UI.Dashboard.Designer.dll;UI.Dashboard.Designer.dll;Framework.ComponentModel.Core;ActFrameworkComponent;Act.Framework.ComponentModel.dll;Framework.ComponentModel.dll;OpportunitiesByUser;ScheduleAtAGlance;Act.Framework.ComponentModel.Core.dll;Framework.ComponentModel.Core.dll;Remoting;SyncML;Act.Framework;namespace;SetCompanyLink;Contact.SetCompanyLink;ClearCompanyLink;Contact.ClearCompanyLink;Contact.Update;GroupDetailView;CompanyDetailView;HierarchicalEntityInfoTree;HierarchicalEntityInfoPickerTree;MutableEntityManger;GroupManager;CompanyManager" MadCap:tocPath="Feature Reference|Groups and Companies" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Groups and companies structure</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor46"></a>Groups and companies structure</h1>
+        <p>The User Interface (UI) and Framework structure of <span class="MyVariablesProductShortName">Act!</span> Groups and Companies is similar to other <span class="MyVariablesProductShortName">Act!</span> entities.</p>
+        <h2>User Interface</h2>
+        <p>In addition to the GroupDetailView and CompanyDetailView classes, Groups and Companies also use the following UI classes:</p>
+        <ul>
+            <li value="1"><b>HierarchicalEntityInfoTree</b> is the tree control that is used by both Groups and Companies detail view. The control uses an interface to talk to the framework manager so it can work with companies or groups without duplicating the code.
+</li>
+            <li value="2"><b>HierarchicalEntityInfoPickerTree</b> is the tree control used by all the dialogs in the system that will show groups and companies. It derives from the view tree control and adds behavior specific to use in a dialog.
+</li>
+        </ul>
+        <h2>Framework</h2>
+        <p>Groups and Companies use the following Framework classes:</p>
+        <ul>
+            <li value="1"><b>MutableEntityManger
+</b>contains the SDK methods and properties that are common among Contact, Groups and Companies.
+
+</li>
+            <li value="2"><b>GroupManager/CompanyManager</b>
+            </li>
+        </ul>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

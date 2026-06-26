@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Customization Cookbook" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Creating a custom control</title>
+        <link href="../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Creating a <a name="kanchor78"></a>custom control</h1>
+        <p>This sample application demonstrates how to create a custom control that obtains information from the Contact Name field in the <span class="MyVariablesProductShortName">Act!</span> database and displays that information on a layout. The control is a <i>tool</i>, which means that after you compile it and place it in <span class="MyVariablesan Act!">an Act!</span> installation, the tool is available in the Toolbox of the <span class="MyVariablesProductShortName">Act!</span> Layout Designer.</p>
+        <p>Since this application is a control rather than a plugin, you place it in the Tools folder  rather than the Plugins folder.</p>
+        <P class="Infinitive">To implement the tool as is&#160;</P>
+        <ol>
+            <li value="1">Locate the ContactNameControl.zip file you downloaded with the SDK in the Code Samples folder, and unzip it.</li>
+            <li value="2">Open the ContactNameControl.cs file in Microsoft Visual Studio 2005 or later.</li>
+            <li value="3">Create a Visual Studio project using the open CS file, referencing:</li>
+        </ol>
+        <blockquote>
+            <ul>
+                <li value="1">Act.Framework.dll</li>
+                <li value="2">Act.Framework.ComponentModel.Core.dll</li>
+                <li value="3">Act.UI.Core.dll</li>
+                <li value="4">Act.Shared.Collections.dll</li>
+            </ul>
+        </blockquote>
+        <ol MadCap:continue="true">
+            <li value="4">Compile the project by clicking the <b>Compile </b>tool.</li>
+            <li value="5">Locate the DLL file that you just compiled, and copy it to the Tools folder in your <span class="MyVariablesProductShortName">Act!</span> installation.</li>
+        </ol>
+        <p>The tool loads next time you start <span class="MyVariablesProductShortName">Act!</span>.</p>
+        <p>You can make changes to the tool by editing the ContactNameControl.cs file. Each method in the CS file displays comments that direct you where to make changes. For example, you can:</p>
+        <ul>
+            <li value="1">Change the data the tool accesses.</li>
+            <li value="2">Change the UI display of the data.</li>
+        </ul>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="ActFramework;Act.Web;FX;C1;FlexGrid;IComponent;Act.Framework.ComponentModel.Core;bitmask;Datastore" MadCap:conditionTagExpression="" MadCap:tocPath="Feature Reference|Smart Tasks (Workflows)" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Smart Tasks SDK implementation</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor53"></a>Smart Tasks SDK implementation</h1>
+        <p>This topic provides detailed design information that directly supports SDK implementation of the design.</p>
+        <h2>Component Model</h2>
+        <p>The minimum requirements for implementing a Smart Tasks component are to: </p>
+        <ul>
+            <li value="1">	Derive from System.Workflow.Activities.SequenceActivity or ActSequenceActivity</li>
+            <li value="2">Have an attribute that indicates its Designer and implements System.ComponentModel.Design.Idesigner  (needed for designer support)</li>
+            <li value="3">Have an attribute that indicates its ToolboxItem (needed for designer support)</li>
+            <li value="4">Have an attribute that indicates its ToolboxBitmap (needed for designer support)</li>
+        </ul>
+        <p>A base component ActSequenceActivity is supplied for SDK consumers to derive from, but it is not a requirement. The Smart Task components all derive from the base component.</p>
+        <p><b>ACTSequenceActivity</b>
+        </p>
+        <p>The design for the components calls for a base sequence activity in the Act.Framework.ComponentModel.Core assembly that will be part of the SDK. This ACTSequenceActivity activity encompasses all the functionality common to Smart Task activities: the Workflow Definition Name, Show Dialog, Requires User and Description and the ACTSequentialEntityWorkflow.</p>
+        <p><b>SequentialEntityWorkflow</b>
+        </p>
+        <p>The design for the Sequential workflows calls for a base sequential activity in the Act.Framework.ComponentModel.Core assembly that will be part of the SDK.  This activity derives from System.Workflow.Activities.SequenceActivity. The SequentialEntityWorkflow activity encompasses the functionality common to a Smart Task sequential workflow.    This is the abstract base class for any entity-based workflow and provides context of current user and current entity to inheritors.   The class provides access to the ActFramework, Current User, Current Entity and the Current Entities Record Manager.</p>
+        <p><b>SequentialContactWorkflow</b>
+        </p>
+        <p>The design for the Sequential workflows calls for a base sequential activity in the Act.Framework.ComponentModel.Core assembly that is part of the SDK.  The SequentiaContactyWorkflow activity encompasses the functionality common to a Smart Task sequential workflow that is run for a Contact record.    This class provides access to the Contact record that the Sequential workflow was run by overriding the CurrentEntity from the base class.</p>
+        <p><b>SequentialOpportunityWorkflow</b>
+        </p>
+        <p>The design for the Sequential workflow calls for a base sequential activity in the Act.Framework.ComponentModel.Core assembly that is part of the SDK.  The SequentialOpportunityWorkflow activity encompasses the functionality common to a Smart Task sequential workflow that is run for an Opportunity record.    This class provides access to the Opportunity record  by overriding the CurrentEntity from the base class.</p>
+        <H2>Specification-level Smart Task activities</H2>
+        <p>The following activities currently derive from the ACTSequenceActivity activity:</p>
+        <ul>
+            <li value="1"><span class="MyVariablesProductShortName">Act!</span> Delay Activity</li>
+            <li value="2">Send E-mail Activity</li>
+            <li value="3">Schedule <span class="MyVariablesProductShortName">Act!</span> Activity</li>
+        </ul>
+        <p>These activities implement the logic and attributes specific to each Smart Task activity. For example, the Send E-mail activity has attributes for the subject of an email message and body of an email message.</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

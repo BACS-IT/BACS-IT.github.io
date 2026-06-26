@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Feature Reference|Custom tables" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Creating a custom sub-entity</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Creating a <a name="kanchor31"></a>custom sub-entity</h1>
+        <p>To create a custom sub-entity you need to use the CustomEntityManager
+via the CustomEntities property on the ActFramework. The ActFramework
+object will need to be logged on to the database you want to create the
+custom sub-entity on. You will also need to lock the database to create a
+custom sub-entity because this changes the database schema.
+</p>
+        <p>The CreateCustomSubEntity method creates a new custom sub-entity in
+the database. To create a custom sub-entity you need to specify a unique
+name to use for the custom sub-entity. This name has to be unique
+across all the entities in the database. The recommendation is to do
+something that would make your entity name unique. You can put your
+company name as part of the name, your product name, or generate a
+GUID to use in the name. Whatever you choose, you want to ensure the
+name is unique. The name is what you will use to retrieve your custom
+sub-entity from the database.
+</p>
+        <p>You also need to supply a unique display name for the custom sub-entity.
+This display name is what will be displayed to the user in help about and
+possibly in the future for define fields, lookups, etc.</p>
+        <p>The next parameter for creating a custom sub-entity is an enumeration
+ParentEntity. This is a bitmask of what entities you want your custom
+sub-entity to hang off of. ParentEntity currently includes Contacts,
+Groups and Companies. A custom sub-entity can belong to Contacts,
+Groups, Companies, Contacts &amp; Groups, Groups &amp; Companies or all three.
+</p>
+        <p>There is a boolean parameter where you specify if you want the custom
+sub-entity to be visible in the define fields UI. In the initial SDK release of
+custom sub-entities the define fields UI will not be present, but in future
+versions of <span class="MyVariablesProductShortName">Act!</span> this could become available. This boolean provides a way
+to either have or not have your custom sub-entity appear in the UI.
+</p>
+        <p>The last parameter is an optional description.
+</p>
+        <p>CreateCustomSubEntity returns a CustomEntityDescriptor. The
+CustomEntityDescriptor object is what is used to represent a particular
+custom entity in the database. The descriptor is used to specify which
+custom entity you would like to perform an SDK operation on.
+</p>
+        <p>If the CustomEntityDescriptor returned is not a null object and you didn’t
+receive any exceptions, you can then create fields in that custom sub-entity.</p>
+        <h2>Adding fields to a custom sub-entity</h2>
+        <p>The API for creating fields in custom sub-entities is the same as creating
+custom fields in a regular <span class="MyVariablesProductShortName">Act!</span> entity like Contacts. You create a
+FieldDescriptor object and call to the FieldDescriptorManager to save it to
+the database. Instead of specifying Contacts, Groups or Companies when
+you save the field you will need to pass in the CustomEntityDescriptor you
+got from creating your custom sub-entity.
+</p>
+        <p>All of the same features and rules that apply to creating a custom field in
+Contacts, Groups, and Companies apply to creating fields in custom sub-entities.
+Field level security is supplied as well as the normal define fields
+options in creating a field. If you created a field on Contacts it should
+be the same when creating a field on a custom sub-entity.</p>
+        <h2>Alias name</h2>
+        <p>With the release of custom sub-entities there is a new name property for
+fields called alias that should be used. Alias is a way of specifying a name
+for your field that can be used to programmatically get the field descriptor
+or data from an object for your field. The alias works similar to the
+physical name of the field in the database. It cannot be changed after it is
+set and it will always reliably fetch the field since the name is not localized
+and is not shown to the end user. This solves the problem of creating
+custom fields in <span class="MyVariablesProductShortName">Act!</span> and then being able to programmatically get access
+to them. Previously you would have had to store off the physical name
+since the display name could be changed or localized.
+</p>
+        <p>The FieldDescriptor class from define fields now has an overload in the
+constructor to take the alias. This is the easiest way to set the alias. The
+alias can also be set on a field after its creation but it can only be set if
+the alias is null. Alias can only be set once and behaves like a
+physical field name.
+</p>
+        <p>Alias is available for all define field entities so you can use it on custom
+Contact, Group, and Company fields as well, it is not limited to custom
+sub-entities.</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

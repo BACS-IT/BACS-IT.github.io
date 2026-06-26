@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="" MadCap:tocPath="Feature Reference|Custom tables" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Custom tables overview</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor30"></a>Custom tables overview</h1>
+        <p>Custom sub-entities provide the SDK consumer the ability to add many tables to <span class="MyVariablesan Act!">an Act!</span> database. Like Notes and Histories which are sub-entities
+in <span class="MyVariablesProductShortName">Act!</span>, you can create your own custom sub-entities that hang off
+Contacts, Groups, or Companies.
+</p>
+        <p>The entry point into the custom sub-entities feature is the
+CustomEntityManager which can be accessed as a property off the
+ActFramework object using the property CustomEntities. This manager
+provides the ability to create new custom sub-entities, update custom
+sub-entities and retrieve information about what custom sub-entities exist
+in the database.
+</p>
+        <p>The CustomEntityManager object also provides the ability to get typed
+CustomSubEntityManager objects back for a particular custom sub-entity.
+The custom sub-entities feature was designed to allow the SDK consumer
+to control what type of object is returned from the database. By deriving
+from CustomSubEntity you can have your own type returned from the
+CustomSubEntityManager for custom sub-entity records.
+</p>
+        <p>CustomEntityFieldDescriptors and CustomEntityLists can be retrieved from
+the CustomSubEntityManager. The CustomSubEntityManager is retrieved
+for a particular custom sub-entity so the fields and lists returned will
+always be for that custom sub-entity. For example, if you had an
+Accounts custom sub-entity, the CustomSubEntityManager would only
+retrieve fields for Accounts and would return lists of Accounts data.</p>
+        <h2>How do I...?</h2>
+        <p><a href="Creating a custom sub-entity.htm">Create a custom sub-entity</a>
+        </p>
+        <p><a href="Retrieving a custom sub-entity.htm">Retrieve a custom sub-entity</a>
+        </p>
+        <p><a href="Editing a custom sub-entity.htm">Edit a custom sub-entity</a>
+        </p>
+        <p><a href="Deleting a custom sub-entity.htm">Delete a custom sub-entity</a>
+        </p>
+        <p><a href="Adding a custom sub-entity row.htm">Add a custom sub-entity row</a>
+        </p>
+        <p><a href="Deleting a custom sub-entity row.htm">Delete a custom sub-entity row</a>
+        </p>
+        <p><a href="Retrieving a custom sub-entity row.htm">Retrieve a custom sub-entity row</a>
+        </p>
+        <p><a href="Editing a custom sub-entity row.htm">Edit a custom sub-entity row</a>
+        </p>
+        <p><a href="Binding data with a custom sub-entity.htm">Bind data with a custom sub-entity</a>
+        </p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

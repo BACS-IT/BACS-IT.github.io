@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Feature Reference|Custom tables" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Retrieving a custom sub-entity</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Retrieving a custom <a name="kanchor32"></a>sub-entity</h1>
+        <p>After a custom sub-entity has been created, you can use methods in the
+CustomEntityManager to get access to it. CustomEntityManager has
+methods to retrieve a custom sub-entity by name, retrieve a list of all the
+custom sub-entities, or retrieve a list by the type of the parent entity.</p>
+        <h2>Retrieving a custom sub-entity by name
+</h2>
+        <p>The CustomEntityManager provides a method called
+GetCustomEntityDescriptor which retrieves a CustomEntityDescriptor for
+the custom sub-entity which matches the name passed in. If the name is
+not a valid custom sub-entity, then a null will be returned from the call.
+You can use this to check  if your custom sub-entity has already
+been created in the database.
+</p>
+        <h2>Retrieving a list of custom sub-entities
+</h2>
+        <p>The GetCustomSubEntities method on CustomEntityManager returns an
+array of CustomEntityDescriptors. This is a list of all the custom sub-entities
+in the logged in database.
+</p>
+        <p>There is also an overload for GetCustomSubEntities that allows you to
+specify a record type. The record type allows you to retrieve the custom
+sub-entities that hang off of a specific record type, Contact, Groups, or
+Companies.
+</p>
+        <h2>Retrieving a CustomSubEntityManager
+</h2>
+        <p>CustomEntityManager provides a method called
+GetSubEntityManager&lt;T&gt;. This method is a generic method. It lets the
+consumer determine the type that will be used when you retrieve data
+from the CustomSubEntityManager.
+</p>
+        <p>The generic parameter T has to be a class that derives from
+CustomSubEntity. You can use CustomSubEntity as the type if you don’t
+want to get custom typed objects back or you can specify your own type
+that derives from CustomSubEntity.
+</p>
+        <h2>Deriving from CustomSubEntity
+</h2>
+        <p>To derive from CustomSubEntity, declare a new class that represents
+your custom sub-entity. For example, declare Account and then implement the required
+constructor.
+The only requirement of the type by the SDK is that it has a public
+constructor that takes one argument of the type
+CustomSubEntityInitializationState. The CustomSubEntity class has a
+protected constructor that takes CustomSubEntityInitializationState. You
+just need to have your class call the base class constructor passing in the
+CustomSubEntityInitializationState object.
+</p>
+        <p>C# Example:
+</p>
+        <P class="Code">public sealed class Account : CustomSubEntity
+</P>
+        <P class="Code">{
+</P>
+        <P class="CodeIndent">public Account(CustomSubEntityInitializationState state)
+</P>
+        <P class="CodeIndent">: base(state)
+</P>
+        <P class="CodeIndent">{
+</P>
+        <P class="CodeIndent">}
+</P>
+        <P class="Code">}
+</P>
+        <P class="Code">// Using the type in a call to get the CustomSubEntityManager.
+</P>
+        <p>CustomSubEntityManager&lt;Account&gt; manager =
+actFramework.CustomEntities.GetSubEntityManager&lt;Account&gt;(descriptor);
+</p>
+        <p>You also need to pass a CustomEntityDescriptor instance into
+GetSubEntityManager to specify which custom sub-entity to retrieve the
+CustomSubEntityManager for. GetSubEntityManager also provides an
+overload that takes the custom sub-entity name instead of a descriptor.
+This is provided to save you a call if the only thing you want to do is get
+the CustomSubEntityManager. You don’t have to call to get the descriptor
+and call back to get the CustomSubEntity Manager. It uses the same logic
+as GetCustomEntityDescriptor to find the custom sub-entity.
+</p>
+        <p>The CustomSubEntityManager provides a typed manager for a particular
+custom sub-entity. It is the functional equivalent of ContactManager in
+the SDK. ContactManager is the public entry point to Contacts. The typed
+instance of CustomSubEntityManager is the public entry point for a
+particular custom sub-entity.
+</p>
+        <p>CustomSubEntityManager provides methods to get
+CustomEntityFieldDescriptors, create custom sub-entity rows, get lists of
+custom sub-entity data, and more.
+</p>
+        <p>A typical usage pattern of CustomSubEntityManager is to hold on to a
+reference to the manager to use it for the life of your program so you
+don’t have to call back to the CustomEntityManager to keep getting it.
+CustomEntityManager does cache the sub-entity managers so it doesn’t
+keep creating instances if you call to get the same custom sub-entity’s
+manager.</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

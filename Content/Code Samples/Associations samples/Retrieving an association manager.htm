@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Code samples|Associations" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Retrieving an associations manager</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor62"></a>Retrieving an associations manager</h1>
+        <p>The associations manager is retrieved using the the GetAssociationManager method of the AssociationsManager. This method supports 5 overloads so the SDK consumer may retrieve the needed manager in several ways.  Examples of two different methods are provided below.</p>
+        <p>/// &lt;summary&gt;</p>
+        <p>/// Retrieves an association manager given two existing database entities.</p>
+        <p>/// &lt;/summary&gt;</p>
+        <p>/// &lt;remarks&gt;</p>
+        <p>/// The entities passed in in this case do not necessarily need to be the entities you wish</p>
+        <p>/// to relate. Instead they are used to determine entity types for future associations</p>
+        <p>/// supported by the returned AssociationManager.</p>
+        <p>/// &lt;/remarks&gt;</p>
+        <p>private AssociationManager GetAssociationManager(Contact contact, Group group)</p>
+        <p>{</p>
+        <blockquote>
+            <p>ActFramework ACTFM = new ActFramework();</p>
+            <p>ACTFM.LogOn("C:\\Documents and Settings\\Administrator\\My Documents\\ACT\\Act for Win 8\\Databases\\Act8Demo.pad", "Chris Huffman", "");</p>
+            <p>AssociationManager manager = ACTFM.Associations.GetAssociationManager(contact, group);</p>
+            <p>return manager;</p>
+        </blockquote>
+        <p>}</p>
+        <p>/// &lt;summary&gt;</p>
+        <p>/// Retrieves an association manager given the name of two entity types. IE "Contact" or "Group"</p>
+        <p>/// &lt;/summary&gt;</p>
+        <p>private AssociationManager GetAssociationManager(string entityOne, string entityTwo)</p>
+        <p>{</p>
+        <blockquote>
+            <p>ActFramework ACTFM = new ActFramework();</p>
+            <p>ACTFM.LogOn("C:\\Documents and Settings\\Administrator\\My Documents\\ACT\\Act for Win 8\\Databases\\Act8Demo.pad", "Chris Huffman", "");</p>
+            <p>AssociationManager manager = ACTFM.Associations.GetAssociationManager(entityOne, entityTwo);</p>
+            <p>return manager;</p>
+        </blockquote>
+        <p>}</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

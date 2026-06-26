@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="ActFramework;Act.Web;FX;C1;FlexGrid" MadCap:tocPath="Feature Reference|Smart Tasks (Workflows)" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Smart Tasks (Workflow) overview</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor50"></a>Smart Tasks (Workflow) overview</h1>
+        <p>“Smart Task” is the term used to describe an automated sequence of tasks that a user would have previously performed manually.  A Smart Task may consist of one step or many steps, possibly taking place over some extended period of time. For example, after creating a new opportunity whose value is greater than $10,000, <span class="MyVariablesan Act!">an Act!</span> user may follow a sequence such as:</p>
+        <ul>
+            <li value="1">notify their sales manager via email</li>
+            <li value="2">schedule a follow up meeting with the lead</li>
+            <li value="3">send a “thank you” email to the lead after the meeting occurs</li>
+            <li value="4">notify their sales manager via email of the meeting results</li>
+        </ul>
+        <p>For detailed information about feature behavior, see the <span class="MyVariablesProductShortName">Act!</span> online Help table of contents.</p>
+        <p><span class="MyVariablesProductShortName">Act!</span>  ships with a selection of pre-defined, general-use Smart Tasks.  The real benefit of Smart Tasks, however, is the ability for  users to create Smart Tasks with customized settings and steps that match their individualized needs.  Additionally, the ability for third parties to create custom steps that users can incorporate into their Smart Tasks using the Smart Tasks Designer allows users to automate even more of their work.  Since the Smart Tasks SDK is built on top of Microsoft's Windows Workflow Foundation for .NET 3.5, third party developers can build these customized steps by leveraging standard MSDN documentation and their existing knowledge of the <span class="MyVariablesProductShortName">Act!</span> SDK, plugins, and components.</p>
+        <p>For detailed information on creating custom Smart Task steps, please review the  <span class="MyVariablesProductShortName">Act!</span> SDK, and the Smart Task SDK sample posted on ACT! Developer Network at <a href="http://community.act.com/sage?category.id=ActDevNet" target="_blank">http://community.act.com</a>.</p>
+        <H2>Notes:</H2>
+        <ul>
+            <li value="1">The Smart Tasks feature is referred to in the SDK by the term "Workflow".</li>
+            <li value="2">Smart Tasks can be run against Contact or Opportunity records.</li>
+            <li value="3">Smart Task definitions are stored in the database.</li>
+            <li value="4">Security follows the security used by Activity Series. Security is checked when creating, editing, deleting, or running Smart Tasks.</li>
+        </ul>
+        <h2>Exposed functionality (<span class="MyVariablesProductShortName">Act!</span>)</h2>
+        <p>Through the SDK, you can perform the following workflow tasks:</p>
+        <ul>
+            <li value="1">Create, edit, delete,  and run Smart Tasks</li>
+            <li value="2">Add a custom activity to the Smart Task toolbox</li>
+        </ul>
+        <h2>Related topics</h2>
+        <p><a href="Smart Tasks structure.htm">Smart Tasks structure</a>
+        </p>
+        <p><a href="Smart Tasks behavior.htm">Smart Tasks behavior</a>
+        </p>
+        <p><a href="Smart Tasks SDK implementation.htm">Smart Tasks SDK implementation</a>
+        </p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

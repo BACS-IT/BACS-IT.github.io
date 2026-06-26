@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Code samples|Contact samples" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" lang="en-us" xml:lang="en-us" MadCap:PathToHelpSystem="../../../" MadCap:HelpSystemFileName="Act! v221 Update 1 SDK.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Inserting a secondary contact</title>
+        <link href="../../Resources/Stylesheets/ACT.css" rel="stylesheet" type="text/css" />
+        <script src="../../SkinSupport/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapAll.js" type="text/javascript">
+        </script>
+        <script src="../../SkinSupport/MadCapTopicAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor59"></a>Inserting a secondary contact</h1>
+        <p>This sample inserts a secondary contact into MyRecord in <span class="MyVariablesan Act!">an Act!</span> database. The sample shows the following tasks:
+	</p>
+        <ul>
+            <li value="1">Getting MyRecord
+</li>
+            <li value="2">Using the SDK to retrieve the list of all secondary contacts for MyRecord. 
+	</li>
+            <li value="3">Using an implementation of IBindingList interface to add a new secondary contact to MyRecord and set properties.      </li>
+            <li value="4">After adding all properties, updating the secondary contact  in the <span class="MyVariablesProductShortName">Act!</span> database
+</li>
+        </ul>
+        <p>/// &lt;summary&gt;<br /></p>
+        <p>/// Inserts Secondary contact to MyRecord
+<br /></p>
+        <p>/// &lt;/summary&gt;		
+<br /></p>
+        <p>private void InsertSecondaryContact()
+<br /></p>
+        <p>{
+<br /></p>
+        <blockquote>
+            <p>ActFramework ACTFM = new ActFramework();
+</p>
+            <p>	ACTFM.LogOn("C:\\Documents and Settings\\Administrator\\My Documents\\ACT\\Act for Win 8\\Databases\\Act8Demo.pad",				"Chris Huffman","");
+
+	</p>
+            <p>Contact actContact = ACTFM.Contacts.GetMyRecord();
+	</p>
+            <p>ContactList secondaryContactsList = ACTFM.Contacts.GetSecondaryContacts( null, actContact );
+</p>
+            <p>	Contact secondaryContact = (Contact)((IBindingList)secondaryContactsList).AddNew(); 
+			
+	</p>
+            <p>string firstName = "John";
+	</p>
+            <p>string lastName = "Smith";
+</p>
+            <p>	string title = "Accountant";
+</p>
+            <blockquote>
+                <p>			.
+			</p>
+                <p>.(add values for other properties)
+</p>
+                <p>			.
+</p>
+            </blockquote>
+            <p>	secondaryContact.FullName = fName + " " + lName;</p>
+            <p>secondaryContact.Fields["Contact.Title",false] = title;
+</p>
+            <blockquote>
+                <p>			.
+</p>
+                <p>			.(assign additional properties to secondary contact)
+</p>
+                <p>			.
+	</p>
+            </blockquote>
+            <p>secondaryContact.Update();
+</p>
+        </blockquote>
+        <p>}
+</p>
+        <script type="text/javascript" src="../../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
